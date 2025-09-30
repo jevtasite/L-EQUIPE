@@ -122,11 +122,103 @@ img {
 
 
 /* ============================================
+   TEAM SECTION
+   ============================================ */
+
+.team-section {
+    background-color: var(--bg-light);
+}
+
+.team-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-4);
+    text-align: center;
+    transition: all var(--duration-normal) var(--ease-default);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--electric-mint);
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: var(--spacing-3);
+    position: relative;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 135, 0.1), rgba(255, 51, 102, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate-blue);
+    transition: all var(--duration-normal) var(--ease-default);
+}
+
+.team-card:hover .photo-placeholder {
+    background: linear-gradient(135deg, rgba(0, 255, 135, 0.2), rgba(255, 51, 102, 0.2));
+    color: var(--electric-mint);
+    transform: scale(1.05);
+}
+
+.team-info {
+    flex: 1;
+}
+
+.team-name {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-subheading);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-1);
+}
+
+.team-role {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--electric-mint);
+    margin-bottom: var(--spacing-3);
+}
+
+.team-bio {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+@media (max-width: 575.98px) {
+    .team-card {
+        padding: var(--spacing-3);
+    }
+
+    .team-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* ============================================
    CLIENTS SECTION
    ============================================ */
 
 .clients-section {
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
 }
 
 
