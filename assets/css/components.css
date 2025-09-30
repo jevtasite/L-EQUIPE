@@ -311,7 +311,7 @@ textarea.form-control {
 }
 
 .management-tabs .nav-link {
-    color: var(--text-muted);
+    color: var(--text-muted) !important;
     border: none;
     border-bottom: 3px solid transparent;
     padding: var(--spacing-2) var(--spacing-3);
@@ -319,19 +319,29 @@ textarea.form-control {
     transition: all var(--duration-fast) var(--ease-default);
 }
 
+.management-tabs .nav-link::after {
+    display: none;
+}
+
 .management-tabs .nav-link:hover {
-    color: var(--electric-mint);
+    color: var(--electric-mint) !important;
     border-bottom-color: var(--electric-mint);
+    letter-spacing: normal;
 }
 
 .management-tabs .nav-link.active {
-    color: var(--electric-mint);
+    color: var(--electric-mint) !important;
     border-bottom-color: var(--electric-mint);
     background: none;
 }
 
 .management-content {
     padding: var(--spacing-4);
+}
+
+.management-content h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-3);
 }
 
 /* Accordion */
