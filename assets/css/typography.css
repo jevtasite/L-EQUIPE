@@ -1,0 +1,430 @@
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   L'ÉQUIPE Football Agency
+   ============================================ */
+
+
+/* ============================================
+   BASE TYPOGRAPHY
+   ============================================ */
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-primary);
+    letter-spacing: var(--letter-spacing-tight);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ============================================
+   HEADINGS
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+/* H1 - Hero Title */
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);  /* 40px - 72px */
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+/* H2 - Section Titles */
+h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);  /* 28px - 40px */
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+/* H3 - Subsection Titles */
+h3 {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);  /* 20px - 28px */
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-subheading);
+}
+
+/* H4 - Card Titles */
+h4 {
+    font-size: clamp(1.125rem, 1.5vw, 1.375rem);  /* 18px - 22px */
+    font-weight: var(--font-weight-semibold);
+    font-family: var(--font-subheading);
+}
+
+/* H5 - Small Headings */
+h5 {
+    font-size: var(--font-size-lg);  /* 18px */
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-body);
+}
+
+/* H6 - Tiny Headings */
+h6 {
+    font-size: var(--font-size-base);  /* 16px */
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+}
+
+
+/* ============================================
+   PARAGRAPH & TEXT STYLES
+   ============================================ */
+
+p {
+    margin-bottom: 1rem;
+    line-height: var(--line-height-relaxed);
+}
+
+.lead {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);  /* 18px - 22px */
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-muted);
+}
+
+.text-small {
+    font-size: var(--font-size-sm);  /* 14px */
+}
+
+.text-tiny {
+    font-size: var(--font-size-xs);  /* 12px */
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+}
+
+
+/* ============================================
+   HERO TYPOGRAPHY
+   ============================================ */
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);  /* 40px - 72px */
+    font-weight: var(--font-weight-black);
+    line-height: 1.1;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-3);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.375rem);  /* 16px - 22px */
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--cool-white);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* ============================================
+   SECTION TYPOGRAPHY
+   ============================================ */
+
+.section-title {
+    font-size: clamp(1.875rem, 4vw, 3rem);  /* 30px - 48px */
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+}
+
+.section-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);  /* 16px - 20px */
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-muted);
+}
+
+.section-content {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* ============================================
+   STATS & NUMBERS
+   ============================================ */
+
+.stat-number {
+    font-size: clamp(3rem, 6vw, 5rem);  /* 48px - 80px */
+    font-weight: var(--font-weight-black);
+    font-family: var(--font-mono);
+    line-height: 1;
+    color: var(--electric-mint);
+    display: block;
+    margin-bottom: var(--spacing-2);
+}
+
+.stat-number::after {
+    content: '+';
+    color: var(--vivid-rose);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--text-muted);
+}
+
+
+/* ============================================
+   SERVICE CARDS
+   ============================================ */
+
+.service-title {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);  /* 20px - 24px */
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-subheading);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-3);
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.service-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-primary);
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: var(--spacing-2);
+}
+
+.service-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--electric-mint);
+    font-weight: var(--font-weight-bold);
+}
+
+
+/* ============================================
+   FORM LABELS
+   ============================================ */
+
+.form-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-1);
+}
+
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.nav-link {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+.navbar-brand .logo-text {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);  /* 20px - 28px */
+    font-weight: var(--font-weight-black);
+    font-family: var(--font-headline);
+    letter-spacing: var(--letter-spacing-wider);
+    text-transform: uppercase;
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer-logo {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-black);
+    font-family: var(--font-headline);
+    letter-spacing: var(--letter-spacing-wider);
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.footer-heading {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-3);
+}
+
+.footer-description {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    color: var(--slate-blue);
+}
+
+.footer-copyright {
+    font-size: var(--font-size-xs);
+    color: var(--slate-blue);
+}
+
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+    color: var(--electric-mint);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-default);
+}
+
+a:hover {
+    color: var(--vivid-rose);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--electric-mint);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* ============================================
+   BADGES & LABELS
+   ============================================ */
+
+.location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    padding: 0.375rem 0.875rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-full);
+    color: var(--text-light);
+}
+
+.swiss-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+    color: var(--text-light);
+}
+
+.badge-flag {
+    font-size: var(--font-size-2xl);
+}
+
+.badge-text {
+    font-size: var(--font-size-sm);
+    color: var(--slate-blue);
+}
+
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1rem 1.5rem;
+    background-color: var(--electric-mint);
+    color: var(--deep-navy);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--border-radius-md);
+}
+
+.skip-to-main:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.0625rem;  /* 17px */
+    }
+
+    .lead {
+        font-size: 1.25rem;  /* 20px */
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    body {
+        font-size: 1.125rem;  /* 18px */
+    }
+
+    .section-content {
+        font-size: 1.0625rem;  /* 17px */
+    }
+}
+
+
+/* ============================================
+   TEXT SELECTION
+   ============================================ */
+
+::selection {
+    background-color: var(--electric-mint);
+    color: var(--deep-navy);
+}
+
+::-moz-selection {
+    background-color: var(--electric-mint);
+    color: var(--deep-navy);
+}

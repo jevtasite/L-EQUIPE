@@ -1,0 +1,270 @@
+/* ============================================
+   CSS VARIABLES - PITCH PRECISION DESIGN SYSTEM
+   L'ÉQUIPE Football Agency
+   ============================================ */
+
+:root {
+    /* ============================================
+       COLOR PALETTE
+       ============================================ */
+
+    /* Primary Colors */
+    --deep-navy: #0A1628;
+    --electric-mint: #00FF87;
+    --vivid-rose: #FF3366;
+    --cool-white: #F8F9FA;
+    --slate-blue: #8B93A7;
+
+    /* Semantic Color Assignments */
+    --color-primary: var(--electric-mint);
+    --color-secondary: var(--vivid-rose);
+    --color-dark: var(--deep-navy);
+    --color-light: var(--cool-white);
+    --color-muted: var(--slate-blue);
+
+    /* Background Colors */
+    --bg-primary: var(--deep-navy);
+    --bg-light: #F8F9FA;
+    --bg-white: #FFFFFF;
+    --bg-overlay: rgba(10, 22, 40, 0.95);
+
+    /* Text Colors */
+    --text-primary: var(--deep-navy);
+    --text-light: var(--cool-white);
+    --text-muted: var(--slate-blue);
+    --text-inverse: var(--cool-white);
+
+    /* Border Colors */
+    --border-light: rgba(139, 147, 167, 0.2);
+    --border-medium: rgba(139, 147, 167, 0.4);
+    --border-mint: var(--electric-mint);
+    --border-rose: var(--vivid-rose);
+
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+
+    /* Font Families */
+    --font-headline: 'Montserrat', 'Arial Black', sans-serif;
+    --font-subheading: 'Montserrat', 'Arial', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Courier New', monospace;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Font Sizes - Mobile First */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 2rem;        /* 32px */
+    --font-size-4xl: 2.5rem;      /* 40px */
+    --font-size-5xl: 3rem;        /* 48px */
+    --font-size-6xl: 4rem;        /* 64px */
+
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.01em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.02em;
+    --letter-spacing-wider: 0.05em;
+
+
+    /* ============================================
+       SPACING SYSTEM (8px base unit)
+       ============================================ */
+
+    --spacing-1: 0.5rem;      /* 8px */
+    --spacing-2: 1rem;        /* 16px */
+    --spacing-3: 1.5rem;      /* 24px */
+    --spacing-4: 2rem;        /* 32px */
+    --spacing-5: 2.5rem;      /* 40px */
+    --spacing-6: 3rem;        /* 48px */
+    --spacing-7: 4rem;        /* 64px */
+    --spacing-8: 6rem;        /* 96px */
+    --spacing-9: 8rem;        /* 128px */
+
+    /* Section Padding */
+    --section-padding-mobile: var(--spacing-7) var(--spacing-3);
+    --section-padding-desktop: var(--spacing-8) var(--spacing-6);
+
+
+    /* ============================================
+       LAYOUT
+       ============================================ */
+
+    /* Container Widths */
+    --container-max-width: 1440px;
+    --content-max-width: 960px;
+
+    /* Grid */
+    --grid-columns: 12;
+    --grid-gutter: 1.5rem;  /* 24px */
+
+    /* Breakpoints (Bootstrap 5) */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+
+    /* Z-Index Scale */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-fixed: 1030;
+    --z-index-modal-backdrop: 1040;
+    --z-index-modal: 1050;
+    --z-index-popover: 1060;
+    --z-index-tooltip: 1070;
+
+
+    /* ============================================
+       ANIMATIONS & TRANSITIONS
+       ============================================ */
+
+    /* Durations */
+    --duration-fast: 200ms;
+    --duration-normal: 300ms;
+    --duration-slow: 600ms;
+    --duration-slower: 1000ms;
+    --duration-counter: 1500ms;
+
+    /* Easing Functions */
+    --ease-default: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0.0, 1, 1);
+    --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    /* Transform Values */
+    --hover-lift: -8px;
+    --hover-scale: 1.02;
+
+
+    /* ============================================
+       SHADOWS
+       ============================================ */
+
+    --shadow-sm: 0 1px 2px 0 rgba(10, 22, 40, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(10, 22, 40, 0.1),
+                 0 2px 4px -1px rgba(10, 22, 40, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(10, 22, 40, 0.1),
+                 0 4px 6px -2px rgba(10, 22, 40, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(10, 22, 40, 0.1),
+                 0 10px 10px -5px rgba(10, 22, 40, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(10, 22, 40, 0.25);
+
+    /* Glow Shadows */
+    --shadow-glow-mint: 0 0 20px rgba(0, 255, 135, 0.3),
+                        0 8px 24px rgba(0, 255, 135, 0.2);
+    --shadow-glow-rose: 0 0 20px rgba(255, 51, 102, 0.3),
+                        0 8px 24px rgba(255, 51, 102, 0.2);
+
+
+    /* ============================================
+       BORDERS & RADIUS
+       ============================================ */
+
+    --border-width: 1px;
+    --border-width-thick: 2px;
+
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-full: 9999px;
+
+
+    /* ============================================
+       COMPONENTS
+       ============================================ */
+
+    /* Buttons */
+    --btn-padding-y: 0.75rem;
+    --btn-padding-x: 2rem;
+    --btn-padding-y-lg: 1rem;
+    --btn-padding-x-lg: 2.5rem;
+    --btn-border-radius: var(--border-radius-md);
+
+    /* Forms */
+    --input-padding-y: 0.75rem;
+    --input-padding-x: 1rem;
+    --input-border-radius: var(--border-radius-sm);
+    --input-border-color: var(--border-light);
+    --input-focus-border-color: var(--electric-mint);
+
+    /* Cards */
+    --card-padding: var(--spacing-4);
+    --card-border-radius: var(--border-radius-lg);
+    --card-border-color: var(--border-light);
+
+    /* Navigation */
+    --nav-height: 80px;
+    --nav-height-scrolled: 70px;
+
+
+    /* ============================================
+       CUSTOM PROPERTIES FOR ANIMATIONS
+       ============================================ */
+
+    /* Parallax */
+    --parallax-speed: 0.3;
+
+    /* Touch Targets (Accessibility) */
+    --touch-target-min: 44px;
+}
+
+
+/* ============================================
+   BOOTSTRAP VARIABLE OVERRIDES
+   ============================================ */
+
+/* Bootstrap Color System Override */
+:root {
+    --bs-primary: #00FF87;
+    --bs-secondary: #FF3366;
+    --bs-dark: #0A1628;
+    --bs-light: #F8F9FA;
+    --bs-body-bg: #FFFFFF;
+    --bs-body-color: #0A1628;
+    --bs-body-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --bs-body-font-size: 1rem;
+    --bs-body-line-height: 1.6;
+
+    /* Bootstrap Grid */
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+
+/* ============================================
+   UTILITY CLASSES FOR COLORS
+   ============================================ */
+
+.text-electric-mint { color: var(--electric-mint) !important; }
+.text-vivid-rose { color: var(--vivid-rose) !important; }
+.text-deep-navy { color: var(--deep-navy) !important; }
+.text-slate-blue { color: var(--slate-blue) !important; }
+
+.bg-deep-navy { background-color: var(--deep-navy) !important; }
+.bg-electric-mint { background-color: var(--electric-mint) !important; }
+.bg-vivid-rose { background-color: var(--vivid-rose) !important; }
+
+.border-electric-mint { border-color: var(--electric-mint) !important; }
+.border-vivid-rose { border-color: var(--vivid-rose) !important; }
+
+.shadow-glow-mint { box-shadow: var(--shadow-glow-mint) !important; }
+.shadow-glow-rose { box-shadow: var(--shadow-glow-rose) !important; }
