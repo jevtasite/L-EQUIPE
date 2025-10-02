@@ -546,6 +546,114 @@ img {
 
 .clients-section {
     background-color: var(--bg-white);
+    overflow: hidden;
+}
+
+/* Logo Carousel Container */
+.logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: var(--spacing-4) 0;
+}
+
+.logo-carousel::before,
+.logo-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-carousel::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--bg-white) 0%, transparent 100%);
+}
+
+.logo-carousel::after {
+    right: 0;
+    background: linear-gradient(90deg, transparent 0%, var(--bg-white) 100%);
+}
+
+/* Logo Track */
+.logo-track {
+    display: flex;
+    gap: var(--spacing-6);
+    animation: scroll-logos 30s linear infinite;
+    width: fit-content;
+}
+
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Individual Logo Styling */
+.client-logo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: var(--border-radius-lg);
+    border: 2px solid rgba(6, 22, 37, 0.06);
+    transition: all var(--duration-normal) var(--ease-default);
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    border-color: var(--electric-mint);
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 255, 135, 0.15);
+}
+
+.logo-placeholder {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+    color: var(--deep-navy);
+    text-align: center;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 767.98px) {
+    .logo-carousel::before,
+    .logo-carousel::after {
+        width: 50px;
+    }
+
+    .logo-track {
+        gap: var(--spacing-4);
+        animation-duration: 20s;
+    }
+
+    .client-logo {
+        width: 150px;
+        height: 90px;
+        padding: var(--spacing-2);
+    }
+
+    .logo-placeholder {
+        font-size: var(--font-size-xs);
+    }
 }
 
 

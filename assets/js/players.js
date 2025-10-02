@@ -11,59 +11,22 @@
     const playerCards = document.querySelectorAll('.player-card');
 
     playerCards.forEach((card) => {
-      let touchStartY = 0;
-      let touchEndY = 0;
-      let touchStartX = 0;
-      let touchEndX = 0;
-      let isTouchMove = false;
-      let touchStartTime = 0;
-      let touchUsed = false;
+      // Get flip indicator buttons
+      const flipIndicators = card.querySelectorAll('.card-flip-indicator');
 
-      // Track touch start position
-      card.addEventListener('touchstart', function (e) {
-        touchStartY = e.touches[0].clientY;
-        touchStartX = e.touches[0].clientX;
-        touchStartTime = Date.now();
-        isTouchMove = false;
-        touchUsed = true; // Mark that touch was used
-      }, { passive: true });
+      flipIndicators.forEach((indicator) => {
+        // Handle clicks on flip indicators
+        indicator.addEventListener('click', function (e) {
+          e.stopPropagation(); // Prevent event from bubbling to card
+          card.classList.toggle('flipped');
+        });
 
-      // Track if user is scrolling
-      card.addEventListener('touchmove', function (e) {
-        touchEndY = e.touches[0].clientY;
-        touchEndX = e.touches[0].clientX;
-        const deltaY = Math.abs(touchEndY - touchStartY);
-        const deltaX = Math.abs(touchEndX - touchStartX);
-
-        // If moved more than 10px vertically or horizontally, it's a scroll/swipe gesture
-        if (deltaY > 10 || deltaX > 10) {
-          isTouchMove = true;
-        }
-      }, { passive: true });
-
-      // Only flip on tap, not on scroll
-      card.addEventListener('touchend', function (e) {
-        const touchDuration = Date.now() - touchStartTime;
-
-        // Only flip if:
-        // 1. No movement detected (not a scroll)
-        // 2. Touch duration is less than 200ms (quick tap)
-        if (!isTouchMove && touchDuration < 200) {
+        // Handle touch on flip indicators
+        indicator.addEventListener('touchend', function (e) {
           e.preventDefault();
-          this.classList.toggle('flipped');
-        }
-      });
-
-      // Desktop/Mouse click - works for both touch and non-touch devices
-      card.addEventListener('click', function (e) {
-        // Only process click if touch wasn't just used (to avoid double trigger)
-        if (!touchUsed) {
-          this.classList.toggle('flipped');
-        }
-        // Reset touch flag after a short delay
-        setTimeout(() => {
-          touchUsed = false;
-        }, 100);
+          e.stopPropagation();
+          card.classList.toggle('flipped');
+        });
       });
     });
   }
@@ -133,29 +96,17 @@
 
   // Keyboard Navigation for Accessibility
   function initKeyboardNavigation() {
-    const playerCards = document.querySelectorAll('.player-card');
+    const flipIndicators = document.querySelectorAll('.card-flip-indicator');
 
-    playerCards.forEach((card, index) => {
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('role', 'button');
-      card.setAttribute(
-        'aria-label',
-        `Player card ${index + 1}. Press Enter to view statistics`
-      );
+    flipIndicators.forEach((indicator, index) => {
+      indicator.setAttribute('tabindex', '0');
+      indicator.setAttribute('role', 'button');
 
-      card.addEventListener('keydown', function (e) {
+      indicator.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          this.classList.toggle('flipped');
-
-          // Update aria-label based on state
-          const isFlipped = this.classList.contains('flipped');
-          this.setAttribute(
-            'aria-label',
-            isFlipped
-              ? `Player statistics. Press Enter to view profile`
-              : `Player card ${index + 1}. Press Enter to view statistics`
-          );
+          const card = this.closest('.player-card');
+          card.classList.toggle('flipped');
         }
       });
     });
@@ -164,13 +115,13 @@
   // Auto-unflip cards when clicking outside
   function initClickOutside() {
     document.addEventListener('click', function (e) {
-      const playerCards = document.querySelectorAll('.player-card');
-
-      playerCards.forEach((card) => {
-        if (!card.contains(e.target) && card.classList.contains('flipped')) {
+      // Check if click is outside any player card
+      if (!e.target.closest('.player-card')) {
+        const playerCards = document.querySelectorAll('.player-card.flipped');
+        playerCards.forEach((card) => {
           card.classList.remove('flipped');
-        }
-      });
+        });
+      }
     });
   }
 
