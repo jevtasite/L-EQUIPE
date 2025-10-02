@@ -34,6 +34,12 @@
       rel="stylesheet"
     />
 
+    <!-- Flag Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="assets/css/typography.css" />
@@ -85,6 +91,9 @@
                 <a class="nav-link" href="#management">Management</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#players">Players</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#team">Team</a>
               </li>
               <li class="nav-item">
@@ -109,12 +118,41 @@
         class="hero-section vh-100 d-flex align-items-center position-relative"
         role="banner"
       >
-        <!-- Canvas for Tactical Formation Dots -->
-        <canvas
-          id="formationCanvas"
-          class="position-absolute top-0 start-0 w-100 h-100"
-          aria-hidden="true"
-        ></canvas>
+        <!-- Football Pitch Lines SVG -->
+        <svg class="pitch-lines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <!-- Center Line -->
+          <line class="pitch-line pitch-line-1" x1="500" y1="0" x2="500" y2="600" />
+
+          <!-- Center Circle -->
+          <circle class="pitch-line pitch-line-2" cx="500" cy="300" r="80" fill="none" />
+          <circle class="pitch-line pitch-line-2" cx="500" cy="300" r="3" />
+
+          <!-- Left Penalty Box -->
+          <rect class="pitch-line pitch-line-3" x="0" y="150" width="150" height="300" fill="none" />
+          <rect class="pitch-line pitch-line-4" x="0" y="220" width="50" height="160" fill="none" />
+
+          <!-- Left Goal -->
+          <rect class="pitch-line pitch-line-5" x="0" y="260" width="15" height="80" fill="none" />
+
+          <!-- Left Penalty Arc -->
+          <path class="pitch-line pitch-line-6" d="M 150 215 A 80 80 0 0 1 150 385" fill="none" />
+
+          <!-- Right Penalty Box -->
+          <rect class="pitch-line pitch-line-7" x="850" y="150" width="150" height="300" fill="none" />
+          <rect class="pitch-line pitch-line-8" x="950" y="220" width="50" height="160" fill="none" />
+
+          <!-- Right Goal -->
+          <rect class="pitch-line pitch-line-9" x="985" y="260" width="15" height="80" fill="none" />
+
+          <!-- Right Penalty Arc -->
+          <path class="pitch-line pitch-line-10" d="M 850 215 A 80 80 0 0 0 850 385" fill="none" />
+
+          <!-- Corner Arcs -->
+          <path class="pitch-line pitch-line-11" d="M 0 0 Q 30 0 30 30" fill="none" />
+          <path class="pitch-line pitch-line-11" d="M 0 600 Q 30 600 30 570" fill="none" />
+          <path class="pitch-line pitch-line-11" d="M 1000 0 Q 970 0 970 30" fill="none" />
+          <path class="pitch-line pitch-line-11" d="M 1000 600 Q 970 600 970 570" fill="none" />
+        </svg>
 
         <div class="container position-relative z-2">
           <div class="row justify-content-center text-center">
@@ -676,8 +714,324 @@
         </div>
       </section>
 
+      <!-- Players Showcase Section -->
+      <section id="players" class="players-section section-padding">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-10">
+              <h2 class="section-title text-center mb-3">OUR PLAYERS</h2>
+              <p class="text-center lead mb-4">
+                Elite athletes managed across Europe's top leagues
+              </p>
+
+              <!-- Position Filter Tabs -->
+              <div class="position-filter text-center">
+                <button class="filter-btn active" data-position="all">All Players</button>
+                <button class="filter-btn" data-position="FWD">Forwards</button>
+                <button class="filter-btn" data-position="MID">Midfielders</button>
+                <button class="filter-btn" data-position="DEF">Defenders</button>
+                <button class="filter-btn" data-position="GK">Goalkeepers</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Players Grid -->
+          <div class="row g-4 players-grid">
+            <!-- Player Card 1 -->
+            <div class="col-12 col-sm-6 col-lg-3 player-card-wrapper" data-position="MID">
+              <div class="player-card" data-player="1">
+                <div class="player-card-inner">
+                  <!-- Front of card -->
+                  <div class="player-card-front">
+                    <div class="tactical-grid"></div>
+                    <div class="player-photo">
+                      <div class="photo-placeholder">
+                        <svg
+                          width="140"
+                          height="140"
+                          viewBox="0 0 140 140"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="70"
+                            cy="70"
+                            r="68"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          />
+                          <circle cx="70" cy="55" r="20" fill="currentColor" />
+                          <path
+                            d="M35 115C35 88 49 70 70 70C91 70 105 88 105 115"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="player-position-badge">MID</div>
+                    <div class="player-basic-info">
+                      <h3 class="player-name">Marco Silva</h3>
+                      <p class="player-club">FC Basel</p>
+                      <div class="player-nationality">
+                        <span class="fi fi-pt"></span>
+                        <span class="country-name">Portugal</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <span>View Stats</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M12 8H4M8 4L12 8L8 12" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Back of card -->
+                  <div class="player-card-back">
+                    <div class="tactical-grid"></div>
+                    <div class="stats-header">
+                      <h3 class="player-name">Marco Silva</h3>
+                      <p class="season-label">2024/25 Season</p>
+                    </div>
+                    <div class="player-stats-detailed">
+                      <div class="stat-row">
+                        <span class="stat-label">Appearances</span>
+                        <span class="stat-value">25</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Goals</span>
+                        <span class="stat-value">8</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Assists</span>
+                        <span class="stat-value">12</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Market Value</span>
+                        <span class="stat-value">€4.5M</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 8H12M8 12L4 8L8 4" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                      <span>Back to Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Player Card 2 -->
+            <div class="col-12 col-sm-6 col-lg-3 player-card-wrapper" data-position="FWD">
+              <div class="player-card" data-player="2">
+                <div class="player-card-inner">
+                  <div class="player-card-front">
+                    <div class="tactical-grid"></div>
+                    <div class="player-photo">
+                      <div class="photo-placeholder">
+                        <svg
+                          width="140"
+                          height="140"
+                          viewBox="0 0 140 140"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="70" cy="70" r="68" stroke="currentColor" stroke-width="2"/>
+                          <circle cx="70" cy="55" r="20" fill="currentColor"/>
+                          <path d="M35 115C35 88 49 70 70 70C91 70 105 88 105 115" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="player-position-badge">FWD</div>
+                    <div class="player-basic-info">
+                      <h3 class="player-name">Ahmed Hassan</h3>
+                      <p class="player-club">Servette FC</p>
+                      <div class="player-nationality">
+                        <span class="fi fi-eg"></span>
+                        <span class="country-name">Egypt</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <span>View Stats</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M12 8H4M8 4L12 8L8 12" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="player-card-back">
+                    <div class="tactical-grid"></div>
+                    <div class="stats-header">
+                      <h3 class="player-name">Ahmed Hassan</h3>
+                      <p class="season-label">2024/25 Season</p>
+                    </div>
+                    <div class="player-stats-detailed">
+                      <div class="stat-row">
+                        <span class="stat-label">Appearances</span>
+                        <span class="stat-value">30</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Goals</span>
+                        <span class="stat-value">18</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Assists</span>
+                        <span class="stat-value">7</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Market Value</span>
+                        <span class="stat-value">€6.2M</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 8H12M8 12L4 8L8 4" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                      <span>Back to Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Player Card 3 -->
+            <div class="col-12 col-sm-6 col-lg-3 player-card-wrapper" data-position="DEF">
+              <div class="player-card" data-player="3">
+                <div class="player-card-inner">
+                  <div class="player-card-front">
+                    <div class="tactical-grid"></div>
+                    <div class="player-photo">
+                      <div class="photo-placeholder">
+                        <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+                          <circle cx="70" cy="70" r="68" stroke="currentColor" stroke-width="2"/>
+                          <circle cx="70" cy="55" r="20" fill="currentColor"/>
+                          <path d="M35 115C35 88 49 70 70 70C91 70 105 88 105 115" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="player-position-badge">DEF</div>
+                    <div class="player-basic-info">
+                      <h3 class="player-name">Jean Dupont</h3>
+                      <p class="player-club">FC Lausanne-Sport</p>
+                      <div class="player-nationality">
+                        <span class="fi fi-fr"></span>
+                        <span class="country-name">France</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <span>View Stats</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M12 8H4M8 4L12 8L8 12" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="player-card-back">
+                    <div class="tactical-grid"></div>
+                    <div class="stats-header">
+                      <h3 class="player-name">Jean Dupont</h3>
+                      <p class="season-label">2024/25 Season</p>
+                    </div>
+                    <div class="player-stats-detailed">
+                      <div class="stat-row">
+                        <span class="stat-label">Appearances</span>
+                        <span class="stat-value">28</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Goals</span>
+                        <span class="stat-value">3</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Clean Sheets</span>
+                        <span class="stat-value">14</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Market Value</span>
+                        <span class="stat-value">€3.8M</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 8H12M8 12L4 8L8 4" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                      <span>Back to Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Player Card 4 -->
+            <div class="col-12 col-sm-6 col-lg-3 player-card-wrapper" data-position="GK">
+              <div class="player-card" data-player="4">
+                <div class="player-card-inner">
+                  <div class="player-card-front">
+                    <div class="tactical-grid"></div>
+                    <div class="player-photo">
+                      <div class="photo-placeholder">
+                        <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+                          <circle cx="70" cy="70" r="68" stroke="currentColor" stroke-width="2"/>
+                          <circle cx="70" cy="55" r="20" fill="currentColor"/>
+                          <path d="M35 115C35 88 49 70 70 70C91 70 105 88 105 115" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="player-position-badge">GK</div>
+                    <div class="player-basic-info">
+                      <h3 class="player-name">Lars Müller</h3>
+                      <p class="player-club">FC Zürich</p>
+                      <div class="player-nationality">
+                        <span class="fi fi-ch"></span>
+                        <span class="country-name">Switzerland</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <span>View Stats</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M12 8H4M8 4L12 8L8 12" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="player-card-back">
+                    <div class="tactical-grid"></div>
+                    <div class="stats-header">
+                      <h3 class="player-name">Lars Müller</h3>
+                      <p class="season-label">2024/25 Season</p>
+                    </div>
+                    <div class="player-stats-detailed">
+                      <div class="stat-row">
+                        <span class="stat-label">Appearances</span>
+                        <span class="stat-value">24</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Clean Sheets</span>
+                        <span class="stat-value">15</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Save %</span>
+                        <span class="stat-value">78%</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Market Value</span>
+                        <span class="stat-value">€2.9M</span>
+                      </div>
+                    </div>
+                    <div class="card-flip-indicator">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 8H12M8 12L4 8L8 4" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                      <span>Back to Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Team Section -->
-      <section id="team" class="team-section section-padding bg-light">
+      <section id="team" class="team-section section-padding">
         <div class="container">
           <div class="row justify-content-center mb-5">
             <div class="col-12 col-lg-10">
@@ -983,8 +1337,8 @@
                 <div class="info-item mb-4">
                   <h4 class="info-label">Address</h4>
                   <p class="info-text">
-                    Neuhofstr. 14<br />
-                    8834 Schindellegi<br />
+                    Chemin du Château-Sec 6<br />
+                    1009 Pully<br />
                     Switzerland
                   </p>
                 </div>
@@ -1082,6 +1436,7 @@
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#management">Management</a></li>
+              <li><a href="#players">Players</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1094,7 +1449,7 @@
               <li>
                 <a href="mailto:info@lequipe.ch">info@lequipe.ch</a>
               </li>
-              <li>Neuhofstr. 14, 8834 Schindellegi</li>
+              <li>Chemin du Château-Sec 6, 1009 Pully</li>
             </ul>
             <div class="footer-social mt-3">
               <a href="#" class="footer-social-link" aria-label="Instagram">
@@ -1175,6 +1530,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/formations.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script src="assets/js/players.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

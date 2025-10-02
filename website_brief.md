@@ -217,15 +217,17 @@ Use CSS clamp() for fluid scaling
 3. **About/Agency Overview**
 4. **Services Section**
 5. **Management Areas**
-6. **Client Success/Stats**
-7. **Contact Section**
-8. **Footer**
+6. **Players Showcase**
+7. **Team Section**
+8. **Client Success/Stats**
+9. **Contact Section**
+10. **Footer**
 
 ### 1. Header/Navigation (Sticky)
 
 **Content:**
 - Logo: "L'ÉQUIPE"
-- Nav Links: About, Services, Management, Contact
+- Nav Links: About, Services, Management, Players, Team, Contact
 - Location: Switzerland flag or text
 - CTA Button: "Get in Touch"
 
@@ -335,7 +337,45 @@ Use CSS clamp() for fluid scaling
 
 **Bootstrap:** Nav tabs for desktop, accordion for mobile
 
-### 6. Client Success/Stats
+### 6. Players Showcase
+
+**Heading:** "OUR PLAYERS"
+
+**Content:**
+- **Subheadline:** "Elite athletes managed across Europe's top leagues"
+- **Player Cards (4 sample cards):**
+  - Player photo (placeholder with SVG)
+  - Position badge (GK, DEF, MID, FWD)
+  - Player name
+  - Current club
+  - Key stats (Apps, Goals/Clean Sheets)
+
+**Visual Elements:**
+- Position badges: GK (Goalkeeper), DEF (Defender), MID (Midfielder), FWD (Forward)
+- Stats display with icons
+- Hover effects: Card lift, electric mint border glow
+- Responsive grid layout
+
+**Bootstrap:** Use `.col-12 .col-sm-6 .col-lg-3` for 4-column grid on desktop, 2 on tablet, 1 on mobile
+
+**Design Notes:**
+- Matches "Pitch Precision" design system
+- Electric mint accent on position badges
+- Card hover animation with lift effect
+- Photo placeholders ready for real player images
+- Stats customizable per player (appearances, goals, assists, clean sheets)
+
+### 7. Team Section
+
+**Heading:** "MEET OUR TEAM"
+
+**Content:**
+- **Subheadline:** "Expert professionals dedicated to your success"
+- **Team member cards** with photo placeholders, names, roles, and bio
+
+**Bootstrap:** Use `.col-12 .col-sm-6 .col-lg-3` for team grid
+
+### 8. Client Success/Stats
 
 **Content:**
 - **Heading:** "TRUSTED BY PROFESSIONAL FOOTBALLERS"
@@ -344,7 +384,7 @@ Use CSS clamp() for fluid scaling
 
 **Bootstrap:** Use `.col-4 .col-md-2` for logo grid
 
-### 7. Contact Section
+### 9. Contact Section
 
 **Heading:** "LET'S DISCUSS YOUR CAREER"
 
@@ -356,17 +396,17 @@ Use CSS clamp() for fluid scaling
 - Submit button (vivid rose)
 
 **Contact Information:**
-- Address: Neuhofstr. 14, 8834 Schindellegi, Switzerland
+- Address: Chemin du Château-Sec 6, 1009 Pully, Switzerland
 - Email: info@lequipe.ch
 - Social: Instagram, LinkedIn
 
 **Bootstrap:** Two-column layout (`.col-lg-6`), form validation
 
-### 8. Footer
+### 10. Footer
 
 **Content:**
 - Logo: L'ÉQUIPE
-- Quick Links: About, Services, Management, Contact
+- Quick Links: About, Services, Management, Players, Team, Contact
 - Social Icons
 - Contact: Email, phone
 - Copyright: "© 2025 L'ÉQUIPE. All rights reserved."
