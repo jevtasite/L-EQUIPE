@@ -35,6 +35,7 @@
   function initPositionFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const playerCardWrappers = document.querySelectorAll('.player-card-wrapper');
+    const seeMoreBtn = document.getElementById('seeMorePlayers');
 
     filterBtns.forEach((btn) => {
       btn.addEventListener('click', function () {
@@ -44,17 +45,56 @@
         filterBtns.forEach((b) => b.classList.remove('active'));
         this.classList.add('active');
 
+        // Hide the See More button when filtering (not on "All Players")
+        if (seeMoreBtn) {
+          if (position === 'all') {
+            seeMoreBtn.style.display = 'inline-flex';
+            // Don't reset button state - let it maintain its current state
+          } else {
+            seeMoreBtn.style.display = 'none';
+          }
+        }
+
         // Filter players
         playerCardWrappers.forEach((wrapper) => {
           const playerPosition = wrapper.dataset.position;
+          const isHiddenPlayer = wrapper.classList.contains('hidden-player');
 
           if (position === 'all' || playerPosition === position) {
-            wrapper.classList.remove('hidden');
-            // Trigger reflow for animation
-            setTimeout(() => {
-              wrapper.style.opacity = '1';
-              wrapper.style.transform = 'scale(1)';
-            }, 10);
+            if (position === 'all') {
+              // When "All Players" is selected, restore based on See More button state
+              if (isHiddenPlayer) {
+                // Check if See More is active
+                const isSeeMoreActive = seeMoreBtn && seeMoreBtn.classList.contains('active');
+                wrapper.classList.remove('hidden');
+
+                if (isSeeMoreActive) {
+                  // Keep 'show' class if See More is active
+                  wrapper.classList.add('show');
+                } else {
+                  // Remove 'show' class if See More is not active
+                  wrapper.classList.remove('show');
+                }
+
+                // Reset opacity and transform
+                wrapper.style.opacity = '1';
+                wrapper.style.transform = 'scale(1)';
+              } else {
+                // Always show initial 4 players
+                wrapper.classList.remove('hidden');
+                wrapper.style.opacity = '1';
+                wrapper.style.transform = 'scale(1)';
+              }
+            } else {
+              // For specific position filters, show all matching players
+              wrapper.classList.remove('hidden');
+              wrapper.classList.add('show');
+              // Trigger reflow for animation
+              setTimeout(() => {
+                wrapper.style.opacity = '1';
+                wrapper.style.transform = 'scale(1)';
+              }, 10);
+            }
           } else {
             wrapper.style.opacity = '0';
             wrapper.style.transform = 'scale(0.8)';
