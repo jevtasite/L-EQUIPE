@@ -50,20 +50,72 @@
 
 
         // ============================================
-        // STAT COUNTER ANIMATION - PLACEHOLDER
+        // STAT COUNTER ANIMATION
         // ============================================
 
-        // TODO Phase 4: Implement animated counter
-        // For now, just show the target numbers
+        const statCards = document.querySelectorAll('.stat-card');
 
-        const statNumbers = document.querySelectorAll('.stat-number');
+        // Function to animate counter
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
 
-        statNumbers.forEach(statElement => {
-            const targetValue = statElement.getAttribute('data-target');
-            if (targetValue) {
-                statElement.textContent = targetValue;
-            }
-        });
+        // Intersection Observer for stat counters
+        if ('IntersectionObserver' in window) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const statCard = entry.target;
+                        const statNumber = statCard.querySelector('.stat-number');
+                        const target = parseInt(statNumber.getAttribute('data-target'));
+
+                        // Animate counter
+                        animateCounter(statNumber, target);
+
+                        // Animate progress bar
+                        statCard.classList.add('counted');
+
+                        const progressFill = statCard.querySelector('.stat-progress-fill');
+                        if (progressFill) {
+                            const progressPercent = progressFill.getAttribute('data-progress');
+                            setTimeout(() => {
+                                progressFill.style.width = progressPercent + '%';
+                            }, 100);
+                        }
+
+                        statsObserver.unobserve(statCard);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            statCards.forEach(card => statsObserver.observe(card));
+        } else {
+            // Fallback - just show numbers
+            statCards.forEach(card => {
+                const statNumber = card.querySelector('.stat-number');
+                const target = statNumber.getAttribute('data-target');
+                statNumber.textContent = target;
+                card.classList.add('counted');
+
+                const progressFill = card.querySelector('.stat-progress-fill');
+                if (progressFill) {
+                    const progressPercent = progressFill.getAttribute('data-progress');
+                    progressFill.style.width = progressPercent + '%';
+                }
+            });
+        }
 
 
         // ============================================

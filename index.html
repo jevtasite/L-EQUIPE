@@ -40,6 +40,15 @@
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="assets/css/typography.css" />
@@ -95,9 +104,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#team">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
               </li>
               <li class="nav-item">
                 <a href="#contact" class="btn btn-primary-custom"
@@ -202,24 +208,24 @@
         <div class="container">
           <div class="row justify-content-center mb-5">
             <div class="col-12 col-lg-10">
-              <h2 class="section-title text-center mb-4">
+              <h2 class="section-title text-center mb-4 reveal">
                 STRATEGIC FOOTBALL MANAGEMENT
               </h2>
               <div class="section-content">
-                <p class="lead text-center mb-4">
+                <p class="lead text-center mb-4 reveal" style="animation-delay: 0.1s;">
                   Based in the heart of Switzerland, L'ÉQUIPE operates at the
                   intersection of excellence and strategy. We combine Swiss
                   precision with deep football industry knowledge to deliver
                   unparalleled management services.
                 </p>
-                <p class="text-center mb-4">
+                <p class="text-center mb-4 reveal" style="animation-delay: 0.2s;">
                   Our comprehensive approach to athlete management goes beyond
                   traditional representation. We provide data-driven insights,
                   strategic career planning, and holistic support that empowers
                   our clients to reach their full potential on and off the
                   pitch.
                 </p>
-                <p class="text-center">
+                <p class="text-center reveal" style="animation-delay: 0.3s;">
                   Every career is a strategic campaign. We approach each
                   player's journey with the same tactical precision that defines
                   championship-winning teams, ensuring optimal positioning at
@@ -231,28 +237,92 @@
 
           <!-- Key Stats -->
           <div class="row g-4 stats-grid">
-            <div class="col-6 col-md-3">
-              <div class="stat-card text-center">
-                <div class="stat-number" data-target="15">0</div>
-                <div class="stat-label">Years of Experience</div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="stat-card reveal" style="animation-delay: 0.4s;">
+                <div class="stat-card-glow"></div>
+                <div class="stat-card-content">
+                  <div class="stat-icon-wrapper">
+                    <div class="stat-icon-bg"></div>
+                    <i class="stat-icon fa-solid fa-clock"></i>
+                  </div>
+                  <div class="stat-value-wrapper">
+                    <div class="stat-number-container">
+                      <span class="stat-number" data-target="15">0</span>
+                      <span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-progress-bar">
+                      <div class="stat-progress-fill" data-progress="100"></div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Years of Experience</div>
+                  <div class="stat-pattern" aria-hidden="true"></div>
+                </div>
               </div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="stat-card text-center">
-                <div class="stat-number" data-target="50">0</div>
-                <div class="stat-label">Players Managed</div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="stat-card reveal" style="animation-delay: 0.5s;">
+                <div class="stat-card-glow"></div>
+                <div class="stat-card-content">
+                  <div class="stat-icon-wrapper">
+                    <div class="stat-icon-bg"></div>
+                    <i class="stat-icon fa-solid fa-users"></i>
+                  </div>
+                  <div class="stat-value-wrapper">
+                    <div class="stat-number-container">
+                      <span class="stat-number" data-target="50">0</span>
+                      <span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-progress-bar">
+                      <div class="stat-progress-fill" data-progress="100"></div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Players Managed</div>
+                  <div class="stat-pattern" aria-hidden="true"></div>
+                </div>
               </div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="stat-card text-center">
-                <div class="stat-number" data-target="200">0</div>
-                <div class="stat-label">Successful Transfers</div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="stat-card reveal" style="animation-delay: 0.6s;">
+                <div class="stat-card-glow"></div>
+                <div class="stat-card-content">
+                  <div class="stat-icon-wrapper">
+                    <div class="stat-icon-bg"></div>
+                    <i class="stat-icon fa-solid fa-arrow-trend-up"></i>
+                  </div>
+                  <div class="stat-value-wrapper">
+                    <div class="stat-number-container">
+                      <span class="stat-number" data-target="200">0</span>
+                      <span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-progress-bar">
+                      <div class="stat-progress-fill" data-progress="100"></div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Successful Transfers</div>
+                  <div class="stat-pattern" aria-hidden="true"></div>
+                </div>
               </div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="stat-card text-center">
-                <div class="stat-number" data-target="25">0</div>
-                <div class="stat-label">Countries Active</div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="stat-card reveal" style="animation-delay: 0.7s;">
+                <div class="stat-card-glow"></div>
+                <div class="stat-card-content">
+                  <div class="stat-icon-wrapper">
+                    <div class="stat-icon-bg"></div>
+                    <i class="stat-icon fa-solid fa-earth-americas"></i>
+                  </div>
+                  <div class="stat-value-wrapper">
+                    <div class="stat-number-container">
+                      <span class="stat-number" data-target="25">0</span>
+                      <span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-progress-bar">
+                      <div class="stat-progress-fill" data-progress="100"></div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Countries Active</div>
+                  <div class="stat-pattern" aria-hidden="true"></div>
+                </div>
               </div>
             </div>
           </div>
