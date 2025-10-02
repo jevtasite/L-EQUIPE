@@ -155,6 +155,27 @@ button,
 
 
 /* ============================================
+   HERO SECTION ANIMATIONS
+   ============================================ */
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-fade-in {
+    opacity: 0;
+    animation: heroFadeIn 0.8s ease-out forwards;
+}
+
+
+/* ============================================
    REDUCED MOTION
    ============================================ */
 
@@ -170,5 +191,11 @@ button,
     .reveal {
         opacity: 1;
         transform: none;
+    }
+
+    .hero-fade-in {
+        opacity: 1;
+        transform: none;
+        animation: none;
     }
 }
