@@ -253,7 +253,10 @@ img {
 }
 
 .stat-icon {
-    color: var(--electric-mint);
+    background: linear-gradient(135deg, var(--electric-mint) 0%, #00d4aa 50%, var(--slate-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 48px;
     transition: all var(--duration-normal) var(--ease-default);
 }
@@ -282,20 +285,24 @@ img {
 .stat-number {
     font-size: clamp(2.75rem, 5vw, 4rem);
     font-weight: var(--font-weight-black);
-    font-family: var(--font-mono);
     line-height: 1;
-    background: linear-gradient(135deg, var(--electric-mint) 0%, var(--deep-navy) 100%);
+    background: linear-gradient(135deg, var(--electric-mint) 0%, #00d4aa 50%, var(--slate-blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: -0.02em;
+    position: relative;
 }
 
 .stat-plus {
     font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: var(--font-weight-bold);
-    color: var(--vivid-rose);
+    font-weight: var(--font-weight-black);
+    background: linear-gradient(135deg, var(--electric-mint) 0%, #00d4aa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-left: 4px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 /* Labels */

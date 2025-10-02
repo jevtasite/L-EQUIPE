@@ -156,16 +156,24 @@
 
 
         // ============================================
-        // MOBILE MENU ACCESSIBILITY
+        // MOBILE MENU HAMBURGER ANIMATION
         // ============================================
 
         const navbarToggler = document.querySelector('.navbar-toggler');
 
         if (navbarToggler && mobileMenu) {
-            navbarToggler.addEventListener('click', function() {
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !isExpanded);
+            // Listen to Bootstrap collapse events for animation sync
+            mobileMenu.addEventListener('show.bs.collapse', function() {
+                navbarToggler.setAttribute('aria-expanded', 'true');
             });
+
+            mobileMenu.addEventListener('hide.bs.collapse', function() {
+                navbarToggler.setAttribute('aria-expanded', 'false');
+            });
+
+            // Force initial state on page load
+            const isCurrentlyExpanded = mobileMenu.classList.contains('show');
+            navbarToggler.setAttribute('aria-expanded', isCurrentlyExpanded ? 'true' : 'false');
         }
 
     });
