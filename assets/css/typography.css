@@ -167,6 +167,11 @@ p {
   margin: 0;
 }
 
+/* German language adjustment for longer words */
+html[lang="de"] .hero-split-title {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+}
+
 /* CTA Buttons Split */
 .hero-cta-split {
   display: flex;
