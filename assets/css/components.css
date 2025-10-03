@@ -355,42 +355,147 @@ textarea.form-control {
 
 /* Management Tabs */
 .management-tabs {
-    border-bottom: 2px solid var(--border-light);
-    margin-bottom: var(--spacing-4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-5);
+    gap: var(--spacing-2);
 }
 
 .management-tabs .nav-link {
     color: var(--text-muted) !important;
     border: none;
     border-bottom: 3px solid transparent;
-    padding: var(--spacing-2) var(--spacing-3);
+    padding: var(--spacing-3) var(--spacing-4);
     background: none;
     transition: all var(--duration-fast) var(--ease-default);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
 }
 
 .management-tabs .nav-link::after {
     display: none;
 }
 
+.management-tabs .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--electric-mint), var(--neon-blue));
+    transition: transform var(--duration-fast) var(--ease-default);
+}
+
 .management-tabs .nav-link:hover {
-    color: var(--electric-mint) !important;
-    border-bottom-color: var(--electric-mint);
+    color: var(--text-primary) !important;
+    background: rgba(0, 255, 159, 0.05);
     letter-spacing: normal;
 }
 
-.management-tabs .nav-link.active {
-    color: var(--electric-mint) !important;
-    border-bottom-color: var(--electric-mint);
-    background: none;
+.management-tabs .nav-link:hover::before {
+    transform: translateX(-50%) scaleX(1);
 }
 
+.management-tabs .nav-link.active {
+    color: var(--text-primary) !important;
+    background: rgba(0, 255, 159, 0.08);
+}
+
+.management-tabs .nav-link.active::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Management Content Card */
 .management-content {
-    padding: var(--spacing-4);
+    padding: var(--spacing-5);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-lg);
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    backdrop-filter: blur(10px);
+}
+
+.management-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--electric-mint), transparent);
+    opacity: 0.5;
 }
 
 .management-content h3 {
     color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: var(--spacing-2);
+}
+
+.management-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--electric-mint), transparent);
+}
+
+.management-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-4);
+}
+
+.management-content p strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.management-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.management-content ul li {
+    position: relative;
+    padding-left: var(--spacing-4);
     margin-bottom: var(--spacing-3);
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    transition: all var(--duration-fast) var(--ease-default);
+}
+
+.management-content ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--electric-mint);
+    font-weight: bold;
+    transition: all var(--duration-fast) var(--ease-default);
+}
+
+.management-content ul li:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.management-content ul li:hover::before {
+    color: var(--neon-blue);
+    transform: translateX(-3px);
 }
 
 /* Accordion */

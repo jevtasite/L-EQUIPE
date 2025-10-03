@@ -148,7 +148,7 @@ p {
         0 4px 24px rgba(0, 0, 0, 0.6),
         0 0 20px rgba(0, 255, 135, 0.15);
     padding: var(--spacing-3) var(--spacing-4);
-    background: rgba(6, 22, 37, 0.6);
+    background: rgba(6, 22, 37, 0.3);
     border-radius: var(--border-radius-md);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
