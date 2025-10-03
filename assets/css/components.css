@@ -617,12 +617,12 @@ textarea.form-control {
 }
 
 .info-text a {
-    color: var(--electric-mint);
+    color: var(--text-primary);
     transition: color var(--duration-fast) var(--ease-default);
 }
 
 .info-text a:hover {
-    color: var(--vivid-rose);
+    color: var(--electric-mint);
 }
 
 /* Social Links */

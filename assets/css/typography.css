@@ -128,12 +128,47 @@ p {
         0 8px 40px rgba(0, 0, 0, 0.6);
     position: relative;
     padding: var(--spacing-4) var(--spacing-5);
-    background: linear-gradient(135deg, rgba(6, 22, 37, 0.85) 0%, rgba(5, 16, 24, 0.9) 100%);
+    padding-left: calc(var(--spacing-5) + 8px);
+    padding-right: calc(var(--spacing-5) + 8px);
+    background:
+        linear-gradient(to right, rgba(0, 255, 135, 0.03), transparent, rgba(0, 255, 135, 0.03)),
+        linear-gradient(135deg, rgba(6, 22, 37, 0.9) 0%, rgba(5, 16, 24, 0.95) 100%);
     border-radius: var(--border-radius-lg);
-    border: 1px solid rgba(0, 255, 135, 0.15);
+    border-left: 4px solid var(--electric-mint);
+    border-right: 4px solid var(--electric-mint);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        -8px 0 24px rgba(0, 255, 135, 0.15),
+        8px 0 24px rgba(0, 255, 135, 0.15),
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 16px 64px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 255, 135, 0.1);
+}
+
+.hero-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background: linear-gradient(180deg, var(--electric-mint), var(--neon-blue));
+    filter: blur(4px);
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background: linear-gradient(180deg, var(--electric-mint), var(--neon-blue));
+    filter: blur(4px);
 }
 
 .hero-subtitle {
@@ -148,11 +183,48 @@ p {
         0 4px 24px rgba(0, 0, 0, 0.6),
         0 0 20px rgba(0, 255, 135, 0.15);
     padding: var(--spacing-3) var(--spacing-4);
-    background: rgba(6, 22, 37, 0.3);
+    padding-left: calc(var(--spacing-4) + 8px);
+    padding-right: calc(var(--spacing-4) + 8px);
+    background:
+        linear-gradient(to right, rgba(0, 255, 135, 0.03), transparent, rgba(0, 255, 135, 0.03)),
+        rgba(6, 22, 37, 0.3);
     border-radius: var(--border-radius-md);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 3px solid var(--electric-mint);
+    border-right: 3px solid var(--electric-mint);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        -6px 0 20px rgba(0, 255, 135, 0.15),
+        6px 0 20px rgba(0, 255, 135, 0.15),
+        0 4px 24px rgba(0, 0, 0, 0.3),
+        inset 0 0 40px rgba(0, 255, 135, 0.03);
+    position: relative;
+}
+
+.hero-subtitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: linear-gradient(180deg, var(--electric-mint), var(--neon-blue));
+    filter: blur(4px);
+}
+
+.hero-subtitle::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: linear-gradient(180deg, var(--electric-mint), var(--neon-blue));
+    filter: blur(4px);
 }
 
 /* Mobile Optimizations */
@@ -415,6 +487,13 @@ li {
 .badge-text {
     font-size: var(--font-size-sm);
     color: var(--slate-blue);
+}
+
+.switzerland-badge {
+    display: inline;
+    color: var(--vivid-rose);
+    font-weight: var(--font-weight-black);
+    letter-spacing: 0.05em;
 }
 
 
