@@ -53,7 +53,7 @@
         // STAT COUNTER ANIMATION
         // ============================================
 
-        const statCards = document.querySelectorAll('.stat-card');
+        const statCards = document.querySelectorAll('.stat-card-simple');
 
         // Function to animate counter
         function animateCounter(element, target, duration = 2000) {

@@ -214,16 +214,41 @@
 }
 
 /* Mobile Menu */
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) {
+    /* Force mobile navbar behavior for iPad Pro */
+    .navbar-toggler {
+        display: block !important;
+    }
+
     .navbar-collapse {
         background-color: var(--bg-overlay);
         backdrop-filter: blur(10px);
         padding: var(--spacing-3);
         margin-top: var(--spacing-2);
         border-radius: var(--border-radius-md);
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: none !important;
+    }
+
+    .navbar-collapse.collapsing {
+        transition: height 0.35s ease !important;
+    }
+
+    .navbar > .container {
+        position: relative;
+    }
+
+    .d-lg-none {
+        display: flex !important;
     }
 
     .navbar-nav {
+        flex-direction: column !important;
         gap: var(--spacing-1);
     }
 
@@ -353,10 +378,12 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--electric-mint), var(--vivid-rose));
+    background: linear-gradient(90deg, var(--electric-mint), var(--neon-blue));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform var(--duration-normal) var(--ease-default);
+    z-index: 1;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
 }
 
 .service-card:hover {
