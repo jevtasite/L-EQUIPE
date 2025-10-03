@@ -43,6 +43,20 @@ img {
     padding-top: 80px;
 }
 
+@media (min-width: 992px) and (max-width: 1440px) {
+    .hero-split-title {
+        font-size: clamp(2rem, 4.5vw, 3.5rem);
+    }
+
+    .hero-feature-card {
+        padding: var(--spacing-3);
+    }
+
+    .hero-features-split {
+        gap: var(--spacing-2);
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-section .col-lg-6 {
         flex: 0 0 100%;
@@ -252,6 +266,7 @@ img {
     box-shadow: 0 2px 8px rgba(6, 22, 37, 0.06);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    height: 100%;
 }
 
 .stat-card-simple::before {
