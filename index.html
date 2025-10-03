@@ -74,22 +74,40 @@
             <span class="logo-text">L'ÉQUIPE</span>
           </a>
 
-          <!-- Mobile Toggle -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="hamburger-icon">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </span>
-          </button>
+          <!-- Mobile Right Section (Language + Hamburger) -->
+          <div class="d-lg-none d-flex align-items-center gap-2">
+            <!-- Language Switcher - Mobile Only -->
+            <div class="dropdown language-dropdown-mobile">
+              <a class="nav-link language-toggle" href="#" role="button" id="languageDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-globe"></i>
+                <span class="current-lang">EN</span>
+                <i class="fas fa-chevron-down ms-1"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="languageDropdownMobile">
+                <li><a class="dropdown-item language-option" href="#" data-lang="en"><span class="fi fi-gb lang-flag"></span> English</a></li>
+                <li><a class="dropdown-item language-option" href="#" data-lang="fr"><span class="fi fi-fr lang-flag"></span> Français</a></li>
+                <li><a class="dropdown-item language-option" href="#" data-lang="de"><span class="fi fi-de lang-flag"></span> Deutsch</a></li>
+                <li><a class="dropdown-item language-option" href="#" data-lang="it"><span class="fi fi-it lang-flag"></span> Italiano</a></li>
+              </ul>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="hamburger-icon">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </button>
+          </div>
 
           <!-- Navigation Links -->
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -109,6 +127,22 @@
               <li class="nav-item">
                 <a class="nav-link" href="#team">Team</a>
               </li>
+
+              <!-- Language Switcher - Desktop Only -->
+              <li class="nav-item dropdown language-dropdown d-none d-lg-block">
+                <a class="nav-link language-toggle" href="#" role="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-globe"></i>
+                  <span class="current-lang">EN</span>
+                  <i class="fas fa-chevron-down ms-1"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="languageDropdown">
+                  <li><a class="dropdown-item language-option" href="#" data-lang="en"><span class="fi fi-gb lang-flag"></span> English</a></li>
+                  <li><a class="dropdown-item language-option" href="#" data-lang="fr"><span class="fi fi-fr lang-flag"></span> Français</a></li>
+                  <li><a class="dropdown-item language-option" href="#" data-lang="de"><span class="fi fi-de lang-flag"></span> Deutsch</a></li>
+                  <li><a class="dropdown-item language-option" href="#" data-lang="it"><span class="fi fi-it lang-flag"></span> Italiano</a></li>
+                </ul>
+              </li>
+
               <li class="nav-item">
                 <a href="#contact" class="btn btn-primary-custom"
                   >Get in Touch</a
