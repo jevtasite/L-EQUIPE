@@ -17,6 +17,7 @@
         if (seeMoreBtn && hiddenPlayers.length > 0) {
             seeMoreBtn.addEventListener('click', function() {
                 const isExpanded = seeMoreBtn.classList.contains('active');
+                const currentLang = localStorage.getItem('language') || 'en';
 
                 if (!isExpanded) {
                     // Show hidden players
@@ -28,7 +29,8 @@
 
                     // Update button
                     seeMoreBtn.classList.add('active');
-                    seeMoreBtn.querySelector('.btn-text').textContent = 'Show Less';
+                    const showLessText = translations[currentLang].players.showLess || 'Show Less';
+                    seeMoreBtn.querySelector('.btn-text').textContent = showLessText;
 
                 } else {
                     // Hide players
@@ -38,7 +40,8 @@
 
                     // Update button
                     seeMoreBtn.classList.remove('active');
-                    seeMoreBtn.querySelector('.btn-text').textContent = 'See More Players';
+                    const seeMoreText = translations[currentLang].players.seeMorePlayers;
+                    seeMoreBtn.querySelector('.btn-text').textContent = seeMoreText;
 
                     // Scroll back to players section
                     const playersSection = document.getElementById('players');
@@ -60,6 +63,7 @@
         if (readMoreBtn && aboutMoreContent) {
             readMoreBtn.addEventListener('click', function() {
                 const isExpanded = readMoreBtn.classList.contains('active');
+                const currentLang = localStorage.getItem('language') || 'en';
 
                 if (!isExpanded) {
                     // Show more content with slide-down animation
@@ -67,7 +71,8 @@
 
                     // Update button
                     readMoreBtn.classList.add('active');
-                    readMoreBtn.querySelector('.btn-text').textContent = 'Read Less';
+                    const readLessText = translations[currentLang].about.readLess;
+                    readMoreBtn.querySelector('.btn-text').textContent = readLessText;
 
                 } else {
                     // Hide content with slide-up animation
@@ -75,7 +80,8 @@
 
                     // Update button
                     readMoreBtn.classList.remove('active');
-                    readMoreBtn.querySelector('.btn-text').textContent = 'Read More';
+                    const readMoreText = translations[currentLang].about.readMore;
+                    readMoreBtn.querySelector('.btn-text').textContent = readMoreText;
 
                     // Scroll back to about section
                     const aboutSection = document.getElementById('about');
