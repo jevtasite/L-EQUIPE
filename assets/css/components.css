@@ -1184,6 +1184,7 @@ textarea.form-control {
   cursor: pointer;
   transition: all var(--duration-fast) var(--ease-default);
   z-index: 10;
+  white-space: nowrap;
 }
 
 /* View Stats button (front of card) - styled as button */

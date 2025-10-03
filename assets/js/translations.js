@@ -660,5 +660,336 @@ const translations = {
       privacyPolicy: "Politique de Confidentialité",
       termsOfService: "Conditions d'Utilisation"
     }
+  },
+
+  de: {
+    meta: {
+      title: "L'ÉQUIPE",
+      description: "L'ÉQUIPE - Internationale Fußballagentur | Sportberatung, Management und Marketing mit Sitz in der Schweiz",
+      keywords: "Fußballagentur, Sportmanagement, Spielerberatung, Schweiz, Fußballberatung"
+    },
+
+    accessibility: {
+      skipToMain: "Zum Hauptinhalt springen",
+      mainNavigation: "Hauptnavigation",
+      toggleNavigation: "Navigation umschalten",
+      homeLink: "L'ÉQUIPE Startseite",
+      backToTop: "Nach oben",
+      instagram: "Instagram",
+      linkedin: "LinkedIn"
+    },
+
+    nav: {
+      brand: "L'ÉQUIPE",
+      about: "Über Uns",
+      services: "Leistungen",
+      management: "Management",
+      players: "Spieler",
+      team: "Team",
+      getInTouch: "Kontakt aufnehmen"
+    },
+
+    language: {
+      currentLang: "DE",
+      english: "English",
+      french: "Français",
+      german: "Deutsch",
+      italian: "Italiano"
+    },
+
+    hero: {
+      basedIn: "Ansässig in",
+      switzerland: "Schweiz",
+      titleLine1: "PRÄZISION.",
+      titleLine2: "LEISTUNG.",
+      titleLine3: "PARTNERSCHAFT.",
+      exploreServices: "Leistungen entdecken",
+      aboutUs: "Über Uns",
+
+      feature1Title: "Strategisches Management",
+      feature1Text: "Expertenhafte Karriereplanung und Positionierung",
+
+      feature2Title: "Karriereentwicklung",
+      feature2Text: "Leistungsoptimierung und Wachstum",
+
+      feature3Title: "Globales Netzwerk",
+      feature3Text: "Verbunden mit Top-Ligen weltweit"
+    },
+
+    about: {
+      title: "ALLE VEREINT - EIN KOLLEKTIV VON AGENTEN, EINE GEMEINSAME VISION",
+      leadPart1: "Bei L'ÉQUIPE beginnt alles mit unseren Grundwerten:",
+      leadPart2: "Bescheidenheit, Ehrlichkeit und Respekt",
+      leadPart3: ". Diese Prinzipien vereinen uns und leiten jede unserer Handlungen. Weil wir glauben, dass Einigkeit Stärke schafft, haben wir eine Agentur geschaffen, die diese Überzeugungen widerspiegelt—solide, menschlich und engagiert.",
+      paragraph1: "Wir verbinden Schweizer Präzision mit über 25 Jahren Erfahrung im professionellen Fußball. Unsere Expertise geht weit über den Platz hinaus und bietet administrative und finanzielle Unterstützung zur Vereinfachung Ihrer Verfahren und Absicherung Ihrer Entscheidungen, psychologische und pädagogische Begleitung für kontinuierlichen Fortschritt sowie einen menschlichen Ansatz, der Ihre Karriere als persönliches Abenteuer anerkennt.",
+      paragraph2: "Wir stehen Ihnen sowohl in Siegen als auch in Niederlagen zur Seite. Mehr als nur Unterstützung bieten wir eine echte Vertrauensallianz, um gemeinsam auf Ihre Ziele hinzuarbeiten. Jede Karriere ist eine strategische Kampagne, und wir gehen den Weg jedes Spielers mit taktischer Präzision an und gewährleisten optimale Positionierung in jeder Phase des professionellen Lebens.",
+      readMore: "Mehr lesen",
+      readLess: "Weniger lesen",
+
+      stats: {
+        yearsLabel: "Jahre Erfahrung",
+        playersLabel: "Betreute Spieler",
+        transfersLabel: "Erfolgreiche Transfers",
+        countriesLabel: "Aktive Länder"
+      }
+    },
+
+    services: {
+      title: "UMFASSENDE FUßBALLLEISTUNGEN",
+
+      strategicConsulting: {
+        title: "Strategische Beratung",
+        description: "Ihr strategischer Partner im Fußball. Wir bieten Expertenberatung zu allen Aspekten Ihrer Karriere und Fußballprojekten.",
+        item1: "Strategische Karriereplanung nach Ihren Bedürfnissen",
+        item2: "Entwicklungsstrategie und Vertragsverhandlungen",
+        item3: "Partnerschaftsoptimierung mit vertrauenswürdigen Experten",
+        item4: "Zugang zu Anwälten, Versicherungsexperten, Marketingspezialisten"
+      },
+
+      careerManagement: {
+        title: "Karrieremanagement",
+        description: "Profispieler werden: Ein Weg weit über das Talent hinaus. Erfolg erfordert mentale Stärke, solide Unterstützung und Begleitung während der gesamten Reise.",
+        item1: "Transferverhandlungen und Klubkontakte",
+        item2: "Vertragsoptimierung und Verlängerung",
+        item3: "Administrative und finanzielle Unterstützung",
+        item4: "Marktpositionierung und Timing-Strategie"
+      },
+
+      scouting: {
+        title: "Scouting",
+        description: "Einer unserer Exzellenzbereich. Unsere Scouts identifizieren vielversprechende Talente weltweit durch detaillierte Leistungsanalysen.",
+        item1: "Globale Talentidentifikation und -verfolgung",
+        item2: "Leistungsanalyse auf dem Spielfeld",
+        item3: "Zusammenarbeit mit Trainern und Nationalmannschaften",
+        item4: "Bewertung des Spielerpotenzials und Entwicklung"
+      },
+
+      mentalPreparation: {
+        title: "Mentale Vorbereitung",
+        description: "Das Mentale: Der Schlüssel zur Leistung. Ein leistungsstarker Spieler definiert sich nicht nur durch technische Fähigkeiten, sondern auch durch mentale Stärke.",
+        item1: "Dedizierter Mentaltrainer für jeden Spieler",
+        item2: "Druck- und Widrigkeitsmanagement",
+        item3: "Konzentrationstraining für Schlüsselmomente im Spiel",
+        item4: "Psychologische Unterstützung während der gesamten Karriere"
+      },
+
+      supportBeyondFootball: {
+        title: "Unterstützung über den Fußball hinaus",
+        description: "Positive Unterstützung. Familiäre Unterstützung spielt eine entscheidende Rolle für den Erfolg eines Spielers.",
+        item1: "Familienunterstützung und Begleitung",
+        item2: "Positive Einbindung in den Alltag des Spielers",
+        item3: "Unterstützung bei der Work-Life-Balance",
+        item4: "Persönliche Entwicklung und Wohlbefinden"
+      },
+
+      injuryManagement: {
+        title: "Verletzungsmanagement",
+        description: "Vorbereitung und Genesung: Gemeinsam Immer. Verletzungen gehören zur Karriere eines Athleten, und wir wissen, wie schwierig es ist, sie zu überwinden.",
+        item1: "Unterstützung während des gesamten Genesungsprozesses",
+        item2: "Schnelle Rückkehr auf das Leistungsniveau",
+        item3: "Koordination mit medizinischen Fachkräften",
+        item4: "Rehabilitationsplanung und -überwachung"
+      }
+    },
+
+    management: {
+      title: "EXPERTISE IN ALLEN MANAGEMENTBEREICHEN",
+
+      tabs: {
+        careerPlanning: "Karriereplanung",
+        playerDevelopment: "Spielerentwicklung",
+        personalBranding: "Personal Branding & PR",
+        dealMaking: "Verhandlungsführung"
+      },
+
+      careerPlanning: {
+        heading: "Karriereplanung",
+        strongText: "Profispieler werden: Ein Weg weit über das Talent hinaus.",
+        description: "Talent allein reicht nicht aus, um das höchste Niveau zu erreichen. Es erfordert auch mentale Stärke, solide Unterstützung und Begleitung während der gesamten Reise. Mit über 25 Jahren Berufserfahrung im Fußball bieten wir einzigartige Einblicke in Karriereverläufe und Marktdynamiken.",
+        item1: "Strategische Analyse von Karrieremöglichkeiten und Entwicklung",
+        item2: "Transferverhandlungen und Vertragsoptimierung",
+        item3: "Administrative und finanzielle Unterstützung zur Vereinfachung der Verfahren",
+        item4: "Langfristige Karriere-Roadmaps und Meilensteinplanung",
+        item5: "Markt-Timing und optimale Positionierungsstrategie"
+      },
+
+      playerDevelopment: {
+        heading: "Spielerentwicklung",
+        strongText: "Das Mentale: Der Schlüssel zur Leistung.",
+        description: "Ein leistungsstarker Spieler wird nicht ausschließlich durch technische Fähigkeiten definiert. Mentale Stärke ist unerlässlich, um Druck, Widrigkeiten und Schlüsselmomente eines Spiels zu bewältigen. Deshalb haben wir für jeden Spieler einen dedizierten Mentaltrainer integriert, der an der Seite führender Experten arbeitet, um jeden Aspekt der Leistung und des Wohlbefindens zu optimieren.",
+        item1: "Mentale Vorbereitung und psychologisches Coaching",
+        item2: "Leistungsoptimierungsprogramme",
+        item3: "Partnerschaften mit Elite-Trainingseinrichtungen",
+        item4: "Videoanalyse und technische Entwicklung",
+        item5: "Ernährungs- und Sportpsychologie-Unterstützung"
+      },
+
+      personalBranding: {
+        heading: "Personal Branding & PR",
+        strongText: "Unterstützung über den Fußball hinaus: Positives Engagement.",
+        description: "Familiäre Unterstützung spielt eine entscheidende Rolle für den Erfolg eines Spielers. Wir unterstützen auch Familien, um sicherzustellen, dass sie positiv und gelassen in den Alltag des Spielers eingebunden sind. Bauen und schützen Sie Ihre persönliche Marke mit strategischem Medienmanagement und umfassender PR-Expertise.",
+        item1: "Umfassende Entwicklung der Medienstrategie",
+        item2: "Social-Media-Content und Community-Management",
+        item3: "Öffentlichkeitsarbeit und Pressekoordination",
+        item4: "Familienunterstützung und persönliche Wohlbefindenprogramme",
+        item5: "Krisenkommunikation und Reputationsmanagement"
+      },
+
+      dealMaking: {
+        heading: "Verhandlungsführung",
+        strongText: "Ihr strategischer Partner im Fußball.",
+        description: "Wir nutzen unsere Expertise, um Sie in allen Aspekten Ihrer Karriere und Fußballprojekten zu beraten. Dank solider Beziehungen zu Akteuren der Fußballbranche bieten wir einen personalisierten und globalen Ansatz. Expertenverhandlungen, unterstützt durch rechtliche und finanzielle Expertise, gewährleisten optimale Ergebnisse bei jeder Transaktion, mit Zugang zu unserem Netzwerk vertrauenswürdiger Partner, einschließlich Anwälten, Versicherungsexperten und Finanzspezialisten.",
+        item1: "Strategische Karriereplanung nach Ihren Bedürfnissen",
+        item2: "Verhandlungs- und Vertragsoptimierungsexpertise",
+        item3: "Rechtliche Partnerschaft und umfassende Unterstützung",
+        item4: "Finanzberatung und Vermögensverwaltungsdienstleistungen",
+        item5: "Internationale Steueroptimierungsstrategien",
+        item6: "Partnerschaftsoptimierung mit Marketing- und Werbeexperten"
+      }
+    },
+
+    players: {
+      title: "UNSERE SPIELER",
+      subtitle: "Elite-Athleten betreut in Europas Top-Ligen",
+
+      filters: {
+        all: "Alle Spieler",
+        forwards: "Stürmer",
+        midfielders: "Mittelfeldspieler",
+        defenders: "Verteidiger",
+        goalkeepers: "Torhüter"
+      },
+
+      positions: {
+        fwd: "STU",
+        mid: "MIT",
+        def: "VER",
+        gk: "TOR"
+      },
+
+      card: {
+        viewStats: "Statistiken ansehen",
+        backToProfile: "Zurück zum Profil",
+        seasonLabel: "Saison 2024/25"
+      },
+
+      stats: {
+        appearances: "Einsätze",
+        goals: "Tore",
+        assists: "Vorlagen",
+        cleanSheets: "Zu Null",
+        savePercent: "Parade %",
+        tackles: "Tacklings",
+        interceptions: "Abfangaktionen"
+      },
+
+      seeMorePlayers: "Mehr Spieler anzeigen",
+      showLess: "Weniger anzeigen"
+    },
+
+    team: {
+      title: "LERNEN SIE UNSER TEAM KENNEN",
+      subtitle: "Expertenprofis, die sich Ihrem Erfolg widmen",
+
+      sectionLeadership: "FÜHRUNG",
+      sectionScouting: "SCOUTING-NETZWERK",
+
+      owner1: {
+        name: "MOUSSA MEITE",
+        role: "Mitbegründer & Direktor",
+        bio: "Strategische Führung und Spielerentwicklung mit umfangreicher Erfahrung im professionellen Fußballmanagement."
+      },
+
+      owner2: {
+        name: "KOFFI TOYE",
+        role: "Mitbegründer & Direktor",
+        bio: "Expertenverhandler und Beziehungsaufbauer, spezialisiert auf Vertragsmanagement und Karriereförderung."
+      },
+
+      scout1: {
+        name: "Scout Name",
+        role: "Chef-Scout",
+        bio: "Europäische Talentidentifikation mit umfangreichem Netzwerk in Top-Ligen."
+      },
+
+      scout2: {
+        name: "Scout Name",
+        role: "Regional-Scout",
+        bio: "Spezialisiert auf Talententdeckung und Spielerbewertung in der Schweizer und deutschen Liga."
+      },
+
+      scout3: {
+        name: "Scout Name",
+        role: "Jugend-Scout",
+        bio: "Entdeckung und Entwicklung der nächsten Generation von Fußballtalenten."
+      },
+
+      scout4: {
+        name: "Scout Name",
+        role: "Leistungsanalyst",
+        bio: "Datengestützte Spielerbewertung und taktische Analyse für Rekrutierungsentscheidungen."
+      }
+    },
+
+    clients: {
+      title: "VERTRAUT VON PROFESSIONELLEN FUßBALLERN",
+      subtitle: "Zusammenarbeit mit Spielern in Europas Top-Ligen"
+    },
+
+    contact: {
+      title: "LASSEN SIE UNS ÜBER IHRE KARRIERE SPRECHEN",
+
+      form: {
+        nameLabel: "Name",
+        namePlaceholder: "Ihr Name",
+        emailLabel: "E-Mail",
+        emailPlaceholder: "ihre@email.com",
+        phoneLabel: "Telefon",
+        phonePlaceholder: "+41 XX XXX XX XX",
+        messageLabel: "Nachricht",
+        messagePlaceholder: "Erzählen Sie uns von Ihren Zielen...",
+        submitButton: "Nachricht senden",
+
+        errorName: "Bitte geben Sie Ihren Namen ein.",
+        errorEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        errorMessage: "Bitte geben Sie Ihre Nachricht ein."
+      },
+
+      info: {
+        title: "Kontaktinformationen",
+        addressLabel: "Adresse",
+        addressLine1: "Chemin du Château-Sec 6",
+        addressLine2: "1009 Pully",
+        addressLine3: "Schweiz",
+        emailLabel: "E-Mail",
+        email: "info@lequipe.ch",
+        followUsLabel: "Folgen Sie Uns"
+      }
+    },
+
+    footer: {
+      logo: "L'ÉQUIPE",
+      description: "Internationale Fußballagentur spezialisiert auf Sportberatung, Management und Marketing.",
+      tagline: "Präzision. Leistung. Partnerschaft.",
+
+      quickLinksHeading: "Schnelllinks",
+      quickLinks: {
+        about: "Über Uns",
+        services: "Leistungen",
+        players: "Spieler",
+        contact: "Kontakt"
+      },
+
+      contactHeading: "Kontakt",
+      contactEmail: "info@lequipe.ch",
+      contactAddress1: "Chemin du Château-Sec 6",
+      contactAddress2: "1009 Pully, Schweiz",
+
+      followUsHeading: "Folgen Sie Uns",
+
+      copyright: "© 2025 L'ÉQUIPE. Alle Rechte vorbehalten.",
+      privacyPolicy: "Datenschutzerklärung",
+      termsOfService: "Nutzungsbedingungen"
+    }
   }
 };
