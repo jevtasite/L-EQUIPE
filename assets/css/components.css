@@ -472,7 +472,6 @@ textarea.form-control {
 .management-tabs .nav-link {
   color: var(--text-muted) !important;
   border: none;
-  border-bottom: 3px solid transparent;
   padding: var(--spacing-3) var(--spacing-4);
   background: none;
   transition: all var(--duration-fast) var(--ease-default);
@@ -494,13 +493,13 @@ textarea.form-control {
   transform: translateX(-50%) scaleX(0);
   width: 80%;
   height: 3px;
-  background: linear-gradient(90deg, var(--electric-mint), var(--neon-blue));
+  background: var(--deep-navy);
   transition: transform var(--duration-fast) var(--ease-default);
 }
 
 .management-tabs .nav-link:hover {
   color: var(--text-primary) !important;
-  background: rgba(0, 255, 159, 0.05);
+  background: rgba(0, 255, 159, 0.12);
   letter-spacing: normal;
 }
 
@@ -510,7 +509,8 @@ textarea.form-control {
 
 .management-tabs .nav-link.active {
   color: var(--text-primary) !important;
-  background: rgba(0, 255, 159, 0.08);
+  background: rgba(0, 255, 159, 0.2);
+  border-bottom-color: transparent !important;
 }
 
 .management-tabs .nav-link.active::before {
