@@ -346,6 +346,7 @@
   transition: all var(--duration-normal) var(--ease-default);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(6, 22, 37, 0.12);
 }
 
 .service-card::before {
@@ -1019,6 +1020,7 @@ textarea.form-control {
   border-radius: var(--card-border-radius);
   background-color: var(--bg-white);
   border: 2px solid var(--border-light);
+  box-shadow: 0 4px 16px rgba(6, 22, 37, 0.12);
   transition: border-color var(--duration-normal) var(--ease-default),
     box-shadow var(--duration-normal) var(--ease-default);
   display: flex;

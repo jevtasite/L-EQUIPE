@@ -94,7 +94,7 @@ p {
   font-size: clamp(1.125rem, 2vw, 1.375rem); /* 18px - 22px */
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--text-muted);
+  color: var(--text-primary);
 }
 
 .text-small {

@@ -13,12 +13,22 @@
         if (!contactForm) return;
 
         // ============================================
-        // BOOTSTRAP FORM VALIDATION
+        // FORM VALIDATION & RATE LIMITING
         // ============================================
+
+        let lastSubmitTime = 0;
+        const submitCooldown = 5000; // 5 seconds
 
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             event.stopPropagation();
+
+            // Check rate limiting first
+            const currentTime = Date.now();
+            if (currentTime - lastSubmitTime < submitCooldown) {
+                alert('Please wait a few seconds before submitting again.');
+                return;
+            }
 
             // Check form validity
             if (!contactForm.checkValidity()) {
@@ -28,6 +38,7 @@
 
             // Form is valid
             contactForm.classList.add('was-validated');
+            lastSubmitTime = currentTime;
 
             // Get form data
             const formData = {
@@ -96,25 +107,6 @@
         }
 
 
-        // ============================================
-        // PREVENT SPAM - SIMPLE RATE LIMITING
-        // ============================================
-
-        let lastSubmitTime = 0;
-        const submitCooldown = 5000; // 5 seconds
-
-        contactForm.addEventListener('submit', function(event) {
-            const currentTime = Date.now();
-
-            if (currentTime - lastSubmitTime < submitCooldown) {
-                event.preventDefault();
-                event.stopPropagation();
-                alert('Please wait a few seconds before submitting again.');
-                return;
-            }
-
-            lastSubmitTime = currentTime;
-        });
 
 
         // ============================================

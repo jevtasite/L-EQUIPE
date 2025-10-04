@@ -58,7 +58,7 @@
           e.preventDefault();
 
           // Calculate offset for fixed navbar (add extra padding)
-          const offsetTop = targetSection.offsetTop - navbarHeight - -50;
+          const offsetTop = targetSection.offsetTop - navbarHeight + 50;
 
           // Smooth scroll
           window.scrollTo({
