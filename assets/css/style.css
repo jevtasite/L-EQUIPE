@@ -224,7 +224,7 @@ img {
    ============================================ */
 
 .about-section {
-    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    background-color: var(--bg-light);
     position: relative;
     overflow: hidden;
 }
@@ -235,9 +235,17 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--electric-mint) 50%, transparent 100%);
-    opacity: 0.3;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(6, 22, 37, 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .about-more-content {
@@ -365,6 +373,27 @@ img {
 
 .services-section {
     background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(6, 22, 37, 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.services-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .service-card {
@@ -379,7 +408,28 @@ img {
    ============================================ */
 
 .management-section {
-    background-color: var(--bg-white);
+    background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.management-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(6, 22, 37, 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.management-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .tab-content {
@@ -394,11 +444,62 @@ img {
 
 
 /* ============================================
+   PLAYERS SECTION
+   ============================================ */
+
+.players-section {
+    background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.players-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(6, 22, 37, 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.players-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ============================================
    TEAM SECTION
    ============================================ */
 
 .team-section {
     background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(6, 22, 37, 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.team-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .team-card {
@@ -490,7 +591,7 @@ img {
    ============================================ */
 
 .clients-section {
-    background-color: var(--bg-white);
+    background-color: var(--bg-light);
     overflow: hidden;
     position: relative;
 }
@@ -503,9 +604,8 @@ img {
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(90deg, rgba(0, 255, 135, 0.02) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(0, 255, 135, 0.02) 1px, transparent 1px);
-    background-size: 40px 40px;
+        radial-gradient(circle at 2px 2px, rgba(6, 22, 37, 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
     pointer-events: none;
     z-index: 0;
 }
@@ -536,12 +636,12 @@ img {
 
 .logo-carousel::before {
     left: 0;
-    background: linear-gradient(90deg, var(--bg-white) 0%, transparent 100%);
+    background: linear-gradient(90deg, var(--bg-light) 0%, transparent 100%);
 }
 
 .logo-carousel::after {
     right: 0;
-    background: linear-gradient(90deg, transparent 0%, var(--bg-white) 100%);
+    background: linear-gradient(90deg, transparent 0%, var(--bg-light) 100%);
 }
 
 /* Logo Track */
@@ -647,7 +747,28 @@ img {
    ============================================ */
 
 .contact-section {
-    background-color: var(--bg-white);
+    background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(6, 22, 37, 0.08) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-form {
