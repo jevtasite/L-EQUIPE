@@ -374,7 +374,7 @@ const translations = {
       management: "Gestion",
       players: "Joueurs",
       team: "Équipe",
-      getInTouch: "Nous Contacter",
+      getInTouch: "Contact",
     },
 
     language: {
