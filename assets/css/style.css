@@ -93,6 +93,70 @@ img {
     }
 }
 
+/* Samsung Galaxy Tab A/S6 Lite (810x1080 portrait, 10.09% tablet market share) */
+@media (min-width: 810px) and (max-width: 810px) and (min-height: 1070px) and (max-height: 1090px) and (orientation: portrait) {
+    .hero-section {
+        padding: 100px 0 55px;
+    }
+
+    .hero-section .container {
+        padding-top: 12px;
+        padding-bottom: 0;
+    }
+
+    .pitch-lines {
+        opacity: 0.18;
+    }
+}
+
+/* iPad 10th gen (820x1180 portrait, 9.89% tablet market share) */
+@media (min-width: 820px) and (max-width: 820px) and (min-height: 1170px) and (max-height: 1190px) and (orientation: portrait) {
+    .hero-section {
+        padding: 105px 0 60px;
+    }
+
+    .hero-section .container {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+
+    .pitch-lines {
+        opacity: 0.18;
+    }
+}
+
+/* Landscape tablets - Amazon Fire HD, older Android tablets (1280x800 landscape, 7.04% tablet market share) */
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 790px) and (max-height: 810px) and (orientation: landscape) {
+    .hero-section {
+        padding: 90px 0 40px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-section .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .hero-section .row {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-section .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .pitch-lines {
+        opacity: 0.16;
+    }
+}
+
 /* Landscape mobile phones (any width, height 360-420px) */
 @media (max-height: 420px) and (min-width: 500px) and (orientation: landscape) {
     .hero-section {
@@ -233,6 +297,81 @@ img {
     .hero-section .row {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    .pitch-lines {
+        opacity: 0.12;
+    }
+}
+
+/* iPhone 12/13/14 standard (390x844 portrait, 5.62% mobile market share) */
+@media (min-width: 390px) and (max-width: 390px) and (min-height: 840px) and (max-height: 850px) {
+    .hero-section {
+        padding: 100px 0 45px;
+        min-height: 100vh;
+    }
+
+    .hero-section .container {
+        padding-top: 5px;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-section .row {
+        margin-top: 0;
+        margin-bottom: 0;
+        row-gap: var(--spacing-2);
+    }
+
+    .pitch-lines {
+        opacity: 0.12;
+    }
+}
+
+/* Samsung Galaxy S21/S22/S23 & Google Pixel 6/7/8 (393x852-873 portrait, 8.18% combined mobile market share) */
+@media (min-width: 393px) and (max-width: 393px) and (min-height: 850px) and (max-height: 880px) {
+    .hero-section {
+        padding: 102px 0 48px;
+        min-height: 100vh;
+    }
+
+    .hero-section .container {
+        padding-top: 5px;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-section .row {
+        margin-top: 0;
+        margin-bottom: 0;
+        row-gap: var(--spacing-2);
+    }
+
+    .pitch-lines {
+        opacity: 0.12;
+    }
+}
+
+/* OnePlus & Xiaomi devices (384x832 portrait, 3.44% mobile market share) */
+@media (min-width: 384px) and (max-width: 384px) and (min-height: 830px) and (max-height: 840px) {
+    .hero-section {
+        padding: 98px 0 43px;
+        min-height: 100vh;
+    }
+
+    .hero-section .container {
+        padding-top: 5px;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-section .row {
+        margin-top: 0;
+        margin-bottom: 0;
+        row-gap: var(--spacing-2);
     }
 
     .pitch-lines {
@@ -1108,6 +1247,70 @@ img {
     border-color: rgba(139, 147, 167, 0.2) !important;
 }
 
+
+/* ============================================
+   DESKTOP OPTIMIZATIONS
+   ============================================ */
+
+/* Full HD desktop (1920x1080, 19.13% desktop market share) */
+@media (min-width: 1920px) and (max-width: 1920px) and (min-height: 1000px) {
+    .hero-section {
+        padding: 120px 0 80px;
+    }
+
+    .hero-section .container {
+        max-width: 1400px;
+    }
+
+    .pitch-lines {
+        opacity: 0.25;
+    }
+}
+
+/* Scaled laptops (1536x864, 7.99% desktop market share - common with 150% scaling) */
+@media (min-width: 1536px) and (max-width: 1536px) and (min-height: 850px) and (max-height: 880px) {
+    .hero-section {
+        padding: 110px 0 70px;
+    }
+
+    .hero-section .container {
+        max-width: 1200px;
+    }
+
+    .pitch-lines {
+        opacity: 0.22;
+    }
+}
+
+/* Budget laptops (1366x768, 7.41% desktop market share) */
+@media (min-width: 1366px) and (max-width: 1366px) and (min-height: 760px) and (max-height: 780px) {
+    .hero-section {
+        padding: 95px 0 55px;
+    }
+
+    .hero-section .container {
+        max-width: 1140px;
+    }
+
+    .pitch-lines {
+        opacity: 0.2;
+    }
+}
+
+/* HD displays (1280x720, 4.14% desktop market share) */
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 710px) and (max-height: 730px) {
+    .hero-section {
+        padding: 90px 0 50px;
+    }
+
+    .hero-section .container {
+        max-width: 1100px;
+    }
+
+    .pitch-lines {
+        opacity: 0.18;
+    }
+}
 
 /* ============================================
    RESPONSIVE ADJUSTMENTS
