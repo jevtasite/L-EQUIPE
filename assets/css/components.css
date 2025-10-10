@@ -887,6 +887,48 @@ textarea.form-control {
   }
 }
 
+/* Nest Hub - Reduce navbar elements to prevent height increase */
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
+  .navbar {
+    padding: var(--spacing-2) 0;
+  }
+
+  .navbar-brand .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+    padding: var(--spacing-1) var(--spacing-1);
+  }
+
+  .location-badge {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .btn-primary-custom {
+    font-size: 0.65rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .language-toggle {
+    font-size: 0.65rem;
+    padding: var(--spacing-1);
+  }
+
+  .current-lang {
+    font-size: 0.65rem;
+  }
+}
+
+/* Hide scroll indicator on bizarre small resolutions (e.g., 400x565) */
+@media (min-width: 376px) and (max-width: 430px) and (max-height: 600px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
 /* ============================================
    SECTION UTILITIES
    ============================================ */
