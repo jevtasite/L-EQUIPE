@@ -1693,6 +1693,14 @@ html[lang="fr"] .badge-pill {
   text-transform: uppercase;
 }
 
+/* Very small screens - reduce logo to prevent navbar wrapping */
+@media (max-width: 321px) {
+  .navbar-brand .logo-text {
+    font-size: 1rem !important; /* 16px - fixed size for very narrow screens */
+    letter-spacing: 0.08em;
+  }
+}
+
 /* ============================================
    FOOTER
    ============================================ */
