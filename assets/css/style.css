@@ -1732,6 +1732,34 @@ Then add this CSS:
   padding: var(--spacing-7) 0 var(--spacing-4) 0;
 }
 
+.footer-logo-wrapper {
+  display: inline-block;
+}
+
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  display: inline-block;
+  transition: all var(--duration-fast) var(--ease-default);
+}
+
+.footer-logo-img:hover {
+  filter: brightness(1.1) drop-shadow(0 0 12px rgba(0, 255, 135, 0.5));
+  transform: scale(1.03);
+}
+
+@media (max-width: 575.98px) {
+  .footer-logo-img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-logo-img {
+    height: 50px;
+  }
+}
+
 .footer-description,
 .footer-location {
   color: var(--slate-blue);
