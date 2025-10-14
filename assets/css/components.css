@@ -24,6 +24,18 @@
   margin-right: var(--spacing-4);
 }
 
+.navbar-brand .logo-img {
+  height: 75px;
+  width: auto;
+  transition: all var(--duration-fast) var(--ease-default);
+}
+
+.navbar-brand:hover .logo-img {
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(0, 255, 135, 0.6));
+  transform: scale(1.02);
+}
+
+/* Fallback for text logo if needed */
 .navbar-brand .logo-text {
   color: var(--text-light);
   transition: color var(--duration-fast) var(--ease-default);
@@ -887,10 +899,33 @@ textarea.form-control {
   }
 }
 
+/* Mobile Logo Sizing */
+@media (max-width: 575.98px) {
+  .navbar-brand .logo-img {
+    height: 48px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar-brand .logo-img {
+    height: 42px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar-brand .logo-img {
+    height: 38px;
+  }
+}
+
 /* Nest Hub - Reduce navbar elements to prevent height increase */
 @media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
   .navbar {
     padding: var(--spacing-2) 0;
+  }
+
+  .navbar-brand .logo-img {
+    height: 50px;
   }
 
   .navbar-brand .logo-text {

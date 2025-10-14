@@ -36,6 +36,7 @@ img {
 .hero-section {
   position: relative;
   background: linear-gradient(135deg, var(--deep-navy) 0%, #051018 100%);
+
   overflow: hidden;
   /* Let content determine height, but suggest full viewport */
   min-height: 100vh;
@@ -599,6 +600,37 @@ img {
   }
 }
 
+/* Player Silhouettes Background */
+.player-silhouettes-bg {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70%;
+  background-image: url("../img/background/silhouette-football-02.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  /* Color adjustment: Convert blue to electric mint (#00FF87) */
+  filter: invert(85%) /* Invert to get light colors */ sepia(100%)
+    /* Add sepia for color base */ saturate(500%) /* Maximum saturation */
+    hue-rotate(90deg) /* Shift to green range */ brightness(1.1); /* Slight brightness boost */
+  animation: silhouetteFade 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes silhouetteFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.28;
+  }
+}
+
 .hero-section .container {
   z-index: 2;
 }
@@ -609,6 +641,32 @@ img {
 
 /* Mobile Optimizations */
 @media (max-width: 767.98px) {
+  /* Mobile background optimization - remove parallax for performance */
+  .hero-section {
+    background-attachment: scroll !important;
+    /* Optional: Use different, lighter image for mobile */
+    /* background-image:
+      linear-gradient(135deg, rgba(6, 22, 37, 0.88) 0%, rgba(5, 16, 24, 0.92) 100%),
+      url('../img/hero-players-action-mobile.jpg'); */
+  }
+
+  .player-silhouettes-bg {
+    left: 50%;
+    width: 80%;
+    height: 60%;
+    opacity: 0;
+    animation: silhouetteFadeMobile 2s ease-in-out 0.3s forwards;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+
   .pitch-lines {
     opacity: 0.15;
   }
@@ -632,6 +690,397 @@ img {
     animation-duration: 1.5s;
   }
 }
+
+/* ============================================
+   PLAYER SILHOUETTES RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Tablet - Content is centered/stacked */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .player-silhouettes-bg {
+    left: 50%;
+    width: 65%;
+    height: 55%;
+    animation: silhouetteFadeTablet 2s ease-in-out 0.4s forwards;
+  }
+
+  @keyframes silhouetteFadeTablet {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Mobile Portrait (≤575px) */
+@media (max-width: 575.98px) {
+  .player-silhouettes-bg {
+    width: 70%;
+    height: 50%;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Small phones - iPhone SE, Samsung S8+, etc. (≤375px) */
+@media (max-width: 375px) {
+  .player-silhouettes-bg {
+    width: 65%;
+    height: 45%;
+    top: 48%;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Very small phones (≤360px) - Samsung S8, Galaxy S5 */
+@media (max-width: 360px) {
+  .player-silhouettes-bg {
+    width: 60%;
+    height: 42%;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Ultra small phones (≤320px) - iPhone 5/SE (1st gen) */
+@media (max-width: 320px) {
+  .player-silhouettes-bg {
+    width: 60%;
+    height: 40%;
+    top: 47%;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Short Height Screens - Landscape/unusual aspect ratios (≤600px height) */
+@media (max-height: 600px) and (min-width: 376px) {
+  .player-silhouettes-bg {
+    height: 50%;
+    top: 48%;
+  }
+
+  @keyframes silhouetteFadeTablet {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Short Height + Small phones (≤600px height AND ≤375px width) */
+@media (max-height: 600px) and (max-width: 375px) {
+  .player-silhouettes-bg {
+    width: 65%;
+    height: 45%;
+    top: 47%;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Wide screens with short height - Keep left positioning (≥900px width, ≤600px height) */
+@media (max-height: 600px) and (min-width: 900px) {
+  .player-silhouettes-bg {
+    left: 25%;
+    width: 45%;
+    height: 55%;
+  }
+
+  @keyframes silhouetteFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.1;
+    }
+  }
+}
+
+/* Medium-wide screens with short height (768-899px width, ≤600px height) */
+@media (max-height: 600px) and (min-width: 768px) and (max-width: 899.98px) {
+  .player-silhouettes-bg {
+    left: 30%;
+    width: 50%;
+    height: 50%;
+  }
+
+  @keyframes silhouetteFadeTablet {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Very short height screens (≤450px) - two columns on wider screens */
+@media (max-height: 450px) and (min-width: 768px) {
+  .player-silhouettes-bg {
+    left: 25%;
+    width: 42%;
+    height: 48%;
+  }
+
+  @keyframes silhouetteFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Very short height screens (≤450px) - stacked on narrow screens */
+@media (max-height: 450px) and (max-width: 767.98px) {
+  .player-silhouettes-bg {
+    width: 65%;
+    height: 42%;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Ultra short height screens (≤380px) - two columns on wider screens */
+@media (max-height: 380px) and (min-width: 768px) {
+  .player-silhouettes-bg {
+    left: 25%;
+    width: 40%;
+    height: 45%;
+  }
+
+  @keyframes silhouetteFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Ultra short height screens (≤380px) - stacked on narrow screens */
+@media (max-height: 380px) and (max-width: 767.98px) {
+  .player-silhouettes-bg {
+    width: 60%;
+    height: 38%;
+  }
+
+  @keyframes silhouetteFadeMobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.28;
+    }
+  }
+}
+
+/* Large Desktop (≥1440px) - Slight position adjustment for wider screens */
+@media (min-width: 1440px) {
+  .player-silhouettes-bg {
+    left: 26%;
+    width: 48%;
+  }
+}
+
+/* Extra Large Desktop (≥1920px) - Further refinement */
+@media (min-width: 1920px) {
+  .player-silhouettes-bg {
+    left: 27%;
+    width: 46%;
+  }
+}
+
+/* ============================================
+   PLAYER SILHOUETTES STYLE VARIANTS
+   Copy-paste any of these to replace the default .player-silhouettes-bg styles
+   ============================================ */
+
+/* VARIANT 1: Subtle (Current Default) - Very faint background
+.player-silhouettes-bg {
+  opacity: 0.15;
+  filter: hue-rotate(90deg) saturate(1.5) brightness(1.2);
+}
+*/
+
+/* VARIANT 2: Medium - More visible, good balance
+.player-silhouettes-bg {
+  opacity: 0.25;
+  filter: hue-rotate(90deg) saturate(1.8) brightness(1.3);
+}
+*/
+
+/* VARIANT 3: Bold - Strong presence, dramatic
+.player-silhouettes-bg {
+  opacity: 0.35;
+  filter: hue-rotate(90deg) saturate(2) brightness(1.4);
+}
+*/
+
+/* VARIANT 4: Cyan Tint - More blue-green
+.player-silhouettes-bg {
+  opacity: 0.2;
+  filter: hue-rotate(120deg) saturate(1.6) brightness(1.3);
+}
+*/
+
+/* VARIANT 5: Pure Mint - Strong green
+.player-silhouettes-bg {
+  opacity: 0.2;
+  filter: hue-rotate(80deg) saturate(2.2) brightness(1.5);
+}
+*/
+
+/* VARIANT 6: No Animation - Static background
+.player-silhouettes-bg {
+  opacity: 0.18;
+  filter: hue-rotate(90deg) saturate(1.5) brightness(1.2);
+  animation: none;
+}
+*/
+
+/* ============================================
+   HERO BACKGROUND ALTERNATIVES
+   Copy-paste any of these to replace the hero background
+   ============================================ */
+
+/* ALTERNATIVE 1: Stadium Atmosphere Background
+.hero-section {
+  background:
+    radial-gradient(ellipse at center, rgba(6, 22, 37, 0.75) 0%, rgba(5, 16, 24, 0.95) 100%),
+    url('../img/hero-stadium.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+*/
+
+/* ALTERNATIVE 2: Dynamic Gradient with Image Blend
+.hero-section {
+  background:
+    linear-gradient(135deg, rgba(6, 22, 37, 0.95) 0%, rgba(5, 16, 24, 0.85) 100%),
+    url('../img/hero-players-action.jpg') center/cover no-repeat;
+  background-blend-mode: multiply;
+}
+*/
+
+/* ALTERNATIVE 3: Diagonal Split Design
+.hero-section {
+  background:
+    linear-gradient(120deg, rgba(6, 22, 37, 0.98) 0%, rgba(6, 22, 37, 0.98) 50%, transparent 50%),
+    url('../img/hero-players-action.jpg') right center/cover no-repeat,
+    linear-gradient(135deg, var(--deep-navy) 0%, #051018 100%);
+}
+*/
+
+/* ALTERNATIVE 4: Collage/Mosaic Effect - requires HTML changes
+.hero-section {
+  background: var(--deep-navy);
+}
+.hero-section::before {
+  background:
+    url('../img/hero-action-1.jpg') 0 0 / 33.33% 50% no-repeat,
+    url('../img/hero-action-2.jpg') 33.33% 0 / 33.33% 50% no-repeat,
+    url('../img/hero-action-3.jpg') 66.66% 0 / 33.34% 50% no-repeat,
+    url('../img/hero-action-4.jpg') 0 50% / 33.33% 50% no-repeat,
+    url('../img/hero-action-5.jpg') 33.33% 50% / 33.33% 50% no-repeat,
+    url('../img/hero-action-6.jpg') 66.66% 50% / 33.34% 50% no-repeat;
+  opacity: 0.3;
+}
+*/
+
+/* ALTERNATIVE 5: Animated Players Silhouettes (CSS-only, no images needed)
+.hero-section {
+  background: linear-gradient(135deg, var(--deep-navy) 0%, #051018 100%);
+}
+.hero-section::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L60 30 L40 30 Z M45 30 L50 60 L30 80 M55 30 L50 60 L70 80' stroke='rgba(0,255,135,0.1)' stroke-width='3' fill='none'/%3E%3C/svg%3E");
+  top: 20%;
+  right: 10%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(10deg); }
+}
+*/
+
+/* ALTERNATIVE 6: Video Background - requires HTML changes
+Add to HTML before hero content:
+<video autoplay muted loop playsinline class="hero-video-bg">
+  <source src="assets/video/football-action.mp4" type="video/mp4">
+</video>
+
+Then add this CSS:
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.4;
+}
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+*/
 
 /* ============================================
    ABOUT SECTION
