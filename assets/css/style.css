@@ -35,8 +35,18 @@ img {
 
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, var(--deep-navy) 0%, #051018 100%);
-
+  background: linear-gradient(
+      135deg,
+      rgba(6, 22, 37, 0.72) 0%,
+      rgba(5, 16, 24, 0.58) 40%,
+      rgba(5, 16, 24, 0.58) 60%,
+      rgba(6, 22, 37, 0.72) 100%
+    ),
+    url("../img/background/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden;
   /* Let content determine height, but suggest full viewport */
   min-height: 100vh;
@@ -489,13 +499,13 @@ img {
   height: 100%;
   background: radial-gradient(
       ellipse at center,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.5) 70%,
-      rgba(0, 0, 0, 0.7) 100%
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.5) 100%
     ),
     radial-gradient(
       circle at 50% 50%,
-      rgba(0, 255, 135, 0.03) 0%,
+      rgba(0, 255, 135, 0.02) 0%,
       transparent 60%
     );
   pointer-events: none;
