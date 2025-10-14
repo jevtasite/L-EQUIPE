@@ -16,11 +16,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: #061625;
 }
 
 body {
   overflow-x: hidden;
-  background-color: var(--bg-white);
+  background-color: #061625;
 }
 
 img {
