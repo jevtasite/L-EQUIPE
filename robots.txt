@@ -1,0 +1,11 @@
+# robots.txt for L'ÉQUIPE International Football Agency
+# https://l-equipe-management.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://l-equipe-management.com/sitemap.xml
+
+# Crawl-delay to be respectful to the server
+Crawl-delay: 1
