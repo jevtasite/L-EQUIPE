@@ -513,135 +513,6 @@ img {
   z-index: 1;
 }
 
-/* Football Pitch Lines SVG */
-.pitch-lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.25;
-}
-
-.pitch-line {
-  stroke: var(--electric-mint);
-  stroke-width: 2;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: drawLine 2s ease-out forwards;
-  filter: drop-shadow(0 0 8px rgba(0, 255, 135, 0.4));
-}
-
-/* Stagger the line drawing animations */
-.pitch-line-1 {
-  animation-delay: 0s;
-}
-.pitch-line-2 {
-  animation-delay: 0.2s;
-}
-.pitch-line-3 {
-  animation-delay: 0.4s;
-}
-.pitch-line-4 {
-  animation-delay: 0.6s;
-}
-.pitch-line-5 {
-  animation-delay: 0.8s;
-}
-.pitch-line-6 {
-  animation-delay: 1s;
-}
-.pitch-line-7 {
-  animation-delay: 0.5s;
-}
-.pitch-line-8 {
-  animation-delay: 0.7s;
-}
-.pitch-line-9 {
-  animation-delay: 0.9s;
-}
-.pitch-line-10 {
-  animation-delay: 1.1s;
-}
-.pitch-line-11 {
-  animation-delay: 1.3s;
-}
-
-/* Filled elements (center dot) */
-.pitch-line[fill]:not([fill="none"]) {
-  fill: var(--electric-mint);
-  stroke: none;
-  stroke-dasharray: 0;
-  stroke-dashoffset: 0;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out 1.5s forwards;
-}
-
-/* Line drawing animation */
-@keyframes drawLine {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-/* Fade in animation for filled elements */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Subtle pulse effect after lines are drawn */
-.pitch-lines {
-  animation: pitchPulse 4s ease-in-out 2.5s infinite;
-}
-
-@keyframes pitchPulse {
-  0%,
-  100% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.35;
-  }
-}
-
-/* Player Silhouettes Background */
-.player-silhouettes-bg {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 70%;
-  background-image: url("../img/background/silhouette-football-02.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-  /* Color adjustment: Convert blue to electric mint (#00FF87) */
-  filter: invert(85%) /* Invert to get light colors */ sepia(100%)
-    /* Add sepia for color base */ saturate(500%) /* Maximum saturation */
-    hue-rotate(90deg) /* Shift to green range */ brightness(1.1); /* Slight brightness boost */
-  animation: silhouetteFade 1s ease-in-out 0.5s forwards;
-}
-
-@keyframes silhouetteFade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.28;
-  }
-}
-
 .hero-section .container {
   z-index: 2;
 }
@@ -654,296 +525,6 @@ img {
 @media (max-width: 767.98px) {
   .hero-section {
     background-attachment: scroll !important;
-  }
-
-  .player-silhouettes-bg {
-    left: 50%;
-    width: 80%;
-    height: 60%;
-    opacity: 0;
-    animation: silhouetteFadeMobile 2s ease-in-out 0.3s forwards;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-
-  .pitch-lines {
-    opacity: 0.15;
-  }
-
-  .pitch-line {
-    stroke-width: 1.5;
-    filter: drop-shadow(0 0 6px rgba(0, 255, 135, 0.3));
-  }
-
-  @keyframes pitchPulse {
-    0%,
-    100% {
-      opacity: 0.15;
-    }
-    50% {
-      opacity: 0.2;
-    }
-  }
-
-  .pitch-line {
-    animation-duration: 1.5s;
-  }
-}
-
-/* ============================================
-   PLAYER SILHOUETTES RESPONSIVE ADJUSTMENTS
-   ============================================ */
-
-/* Tablet - Content is centered/stacked */
-@media (min-width: 576px) and (max-width: 991.98px) {
-  .player-silhouettes-bg {
-    left: 50%;
-    width: 65%;
-    height: 55%;
-    animation: silhouetteFadeTablet 2s ease-in-out 0.4s forwards;
-  }
-
-  @keyframes silhouetteFadeTablet {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Mobile Portrait (≤575px) */
-@media (max-width: 575.98px) {
-  .player-silhouettes-bg {
-    width: 70%;
-    height: 50%;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Small phones - iPhone SE, Samsung S8+, etc. (≤375px) */
-@media (max-width: 375px) {
-  .player-silhouettes-bg {
-    width: 65%;
-    height: 45%;
-    top: 48%;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Very small phones (≤360px) - Samsung S8, Galaxy S5 */
-@media (max-width: 360px) {
-  .player-silhouettes-bg {
-    width: 60%;
-    height: 42%;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Ultra small phones (≤320px) - iPhone 5/SE (1st gen) */
-@media (max-width: 320px) {
-  .player-silhouettes-bg {
-    width: 60%;
-    height: 40%;
-    top: 47%;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Short Height Screens - Landscape/unusual aspect ratios (≤600px height) */
-@media (max-height: 600px) and (min-width: 376px) {
-  .player-silhouettes-bg {
-    height: 50%;
-    top: 48%;
-  }
-
-  @keyframes silhouetteFadeTablet {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Short Height + Small phones (≤600px height AND ≤375px width) */
-@media (max-height: 600px) and (max-width: 375px) {
-  .player-silhouettes-bg {
-    width: 65%;
-    height: 45%;
-    top: 47%;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Wide screens with short height - Keep left positioning (≥900px width, ≤600px height) */
-@media (max-height: 600px) and (min-width: 900px) {
-  .player-silhouettes-bg {
-    left: 25%;
-    width: 45%;
-    height: 55%;
-  }
-
-  @keyframes silhouetteFade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.1;
-    }
-  }
-}
-
-/* Medium-wide screens with short height (768-899px width, ≤600px height) */
-@media (max-height: 600px) and (min-width: 768px) and (max-width: 899.98px) {
-  .player-silhouettes-bg {
-    left: 30%;
-    width: 50%;
-    height: 50%;
-  }
-
-  @keyframes silhouetteFadeTablet {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Very short height screens (≤450px) - two columns on wider screens */
-@media (max-height: 450px) and (min-width: 768px) {
-  .player-silhouettes-bg {
-    left: 25%;
-    width: 42%;
-    height: 48%;
-  }
-
-  @keyframes silhouetteFade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Very short height screens (≤450px) - stacked on narrow screens */
-@media (max-height: 450px) and (max-width: 767.98px) {
-  .player-silhouettes-bg {
-    width: 65%;
-    height: 42%;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Ultra short height screens (≤380px) - two columns on wider screens */
-@media (max-height: 380px) and (min-width: 768px) {
-  .player-silhouettes-bg {
-    left: 25%;
-    width: 40%;
-    height: 45%;
-  }
-
-  @keyframes silhouetteFade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Ultra short height screens (≤380px) - stacked on narrow screens */
-@media (max-height: 380px) and (max-width: 767.98px) {
-  .player-silhouettes-bg {
-    width: 60%;
-    height: 38%;
-  }
-
-  @keyframes silhouetteFadeMobile {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.28;
-    }
-  }
-}
-
-/* Large Desktop (≥1440px) - Slight position adjustment for wider screens */
-@media (min-width: 1440px) {
-  .player-silhouettes-bg {
-    left: 26%;
-    width: 48%;
-  }
-}
-
-/* Extra Large Desktop (≥1920px) - Further refinement */
-@media (min-width: 1920px) {
-  .player-silhouettes-bg {
-    left: 27%;
-    width: 46%;
   }
 }
 
@@ -977,6 +558,65 @@ img {
 .about-section > * {
   position: relative;
   z-index: 1;
+}
+
+/* About Section Logo */
+.about-logo-container {
+  margin-bottom: 3rem;
+}
+
+.about-logo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 12px rgba(6, 22, 37, 0.1));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.about-logo:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 6px 16px rgba(6, 22, 37, 0.15));
+}
+
+/* Responsive adjustments for about logo */
+@media (max-width: 991.98px) {
+  .about-logo {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-logo {
+    max-width: 300px;
+  }
+
+  .about-logo-container {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-logo {
+    max-width: 250px;
+  }
+
+  .about-logo-container {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-logo {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-logo {
+    max-width: 200px;
+  }
 }
 
 .about-more-content {

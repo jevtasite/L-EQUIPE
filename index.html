@@ -340,129 +340,6 @@
         class="hero-section vh-100 d-flex align-items-center position-relative"
         role="banner"
       >
-        <!-- Football Pitch Lines SVG -->
-        <svg
-          class="pitch-lines"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1000 600"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden="true"
-        >
-          <!-- Center Line -->
-          <line
-            class="pitch-line pitch-line-1"
-            x1="500"
-            y1="0"
-            x2="500"
-            y2="600"
-          />
-
-          <!-- Center Circle -->
-          <circle
-            class="pitch-line pitch-line-2"
-            cx="500"
-            cy="300"
-            r="80"
-            fill="none"
-          />
-          <circle class="pitch-line pitch-line-2" cx="500" cy="300" r="3" />
-
-          <!-- Left Penalty Box -->
-          <rect
-            class="pitch-line pitch-line-3"
-            x="0"
-            y="150"
-            width="150"
-            height="300"
-            fill="none"
-          />
-          <rect
-            class="pitch-line pitch-line-4"
-            x="0"
-            y="220"
-            width="50"
-            height="160"
-            fill="none"
-          />
-
-          <!-- Left Goal -->
-          <rect
-            class="pitch-line pitch-line-5"
-            x="0"
-            y="260"
-            width="15"
-            height="80"
-            fill="none"
-          />
-
-          <!-- Left Penalty Arc -->
-          <path
-            class="pitch-line pitch-line-6"
-            d="M 150 215 A 80 80 0 0 1 150 385"
-            fill="none"
-          />
-
-          <!-- Right Penalty Box -->
-          <rect
-            class="pitch-line pitch-line-7"
-            x="850"
-            y="150"
-            width="150"
-            height="300"
-            fill="none"
-          />
-          <rect
-            class="pitch-line pitch-line-8"
-            x="950"
-            y="220"
-            width="50"
-            height="160"
-            fill="none"
-          />
-
-          <!-- Right Goal -->
-          <rect
-            class="pitch-line pitch-line-9"
-            x="985"
-            y="260"
-            width="15"
-            height="80"
-            fill="none"
-          />
-
-          <!-- Right Penalty Arc -->
-          <path
-            class="pitch-line pitch-line-10"
-            d="M 850 215 A 80 80 0 0 0 850 385"
-            fill="none"
-          />
-
-          <!-- Corner Arcs -->
-          <path
-            class="pitch-line pitch-line-11"
-            d="M 0 0 Q 30 0 30 30"
-            fill="none"
-          />
-          <path
-            class="pitch-line pitch-line-11"
-            d="M 0 600 Q 30 600 30 570"
-            fill="none"
-          />
-          <path
-            class="pitch-line pitch-line-11"
-            d="M 1000 0 Q 970 0 970 30"
-            fill="none"
-          />
-          <path
-            class="pitch-line pitch-line-11"
-            d="M 1000 600 Q 970 600 970 570"
-            fill="none"
-          />
-        </svg>
-
-        <!-- Player Silhouettes Background -->
-        <div class="player-silhouettes-bg"></div>
-
         <div class="container position-relative z-2">
           <div class="row align-items-center">
             <!-- Left Column: Title -->
@@ -583,12 +460,13 @@
         <div class="container">
           <div class="row justify-content-center mb-5">
             <div class="col-12 col-lg-10">
-              <h2
-                class="section-title text-center mb-4 reveal"
-                data-i18n="about.title"
-              >
-                ALL UNITED - A COLLECTIVE OF AGENTS, ONE COMMON VISION
-              </h2>
+              <div class="about-logo-container text-center mb-4 reveal">
+                <img
+                  src="assets/img/logo/black-transparent.png"
+                  alt="L'ÉQUIPE - All United"
+                  class="about-logo"
+                />
+              </div>
               <div class="section-content">
                 <p
                   class="lead text-center mb-4 reveal"
