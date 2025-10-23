@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -12,9 +13,19 @@
       content="football agency, sports management, player representation, Switzerland, football consulting"
     />
     <meta name="author" content="L'ÉQUIPE International Football Agency" />
+    <link rel="author" href="/humans.txt" />
+    <meta name="language" content="en" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <link rel="canonical" href="https://l-equipe-management.com/" />
+
+    <!-- Multilingual SEO -->
+    <link rel="alternate" hreflang="en" href="https://l-equipe-management.com/" />
+    <link rel="alternate" hreflang="fr" href="https://l-equipe-management.com/" />
+    <link rel="alternate" hreflang="de" href="https://l-equipe-management.com/" />
+    <link rel="alternate" hreflang="es" href="https://l-equipe-management.com/" />
+    <link rel="alternate" hreflang="ar" href="https://l-equipe-management.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://l-equipe-management.com/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -31,6 +42,9 @@
       property="og:image"
       content="https://l-equipe-management.com/assets/img/logo/color-transparent.png"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="L'ÉQUIPE International Football Agency Logo" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="L'ÉQUIPE" />
 
@@ -74,7 +88,10 @@
     <!-- Preload critical background image -->
     <link rel="preload" href="assets/img/background/background.webp" as="image" type="image/webp" />
 
-    <!-- Preconnect for performance -->
+    <!-- DNS Prefetch and Preconnect for performance -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -118,6 +135,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- Structured Data (JSON-LD) -->
+    <!-- Organization Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -125,17 +143,208 @@
         "name": "L'ÉQUIPE",
         "alternateName": "L'ÉQUIPE International Football Agency",
         "url": "https://l-equipe-management.com",
-        "logo": "https://l-equipe-management.com/assets/img/logo/color-transparent.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://l-equipe-management.com/assets/img/logo/color-transparent.png",
+          "width": 1200,
+          "height": 630
+        },
+        "image": "https://l-equipe-management.com/assets/img/logo/color-transparent.png",
         "description": "International Football Agency specializing in sports consulting, management and marketing based in Switzerland",
+        "slogan": "Precision. Performance. Partnership.",
+        "foundingLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CH"
+          }
+        },
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "CH"
         },
-        "sameAs": ["https://l-equipe-management.com"],
+        "areaServed": "Worldwide",
+        "knowsAbout": ["Football", "Sports Management", "Player Representation", "Sports Consulting", "Sports Marketing"],
+        "sport": "Football",
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer service",
+          "email": "info@l-equipe-management.com",
           "availableLanguage": ["en", "fr", "de", "es", "ar"]
+        },
+        "sameAs": [
+          "https://www.instagram.com/lequipe.management",
+          "https://www.linkedin.com/company/l-equipe-management"
+        ]
+      }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "Player Representation",
+            "description": "Comprehensive representation services for professional football players",
+            "provider": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": "Sports Management"
+          },
+          {
+            "@type": "Service",
+            "name": "Transfer Management",
+            "description": "Expert guidance through transfer negotiations and career transitions",
+            "provider": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": "Sports Management"
+          },
+          {
+            "@type": "Service",
+            "name": "Contract Negotiation",
+            "description": "Professional contract negotiation and legal advisory services",
+            "provider": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": "Sports Management"
+          },
+          {
+            "@type": "Service",
+            "name": "Scouting Services",
+            "description": "Comprehensive player scouting and talent identification",
+            "provider": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": "Sports Consulting"
+          },
+          {
+            "@type": "Service",
+            "name": "Career Planning",
+            "description": "Strategic career planning and development for athletes",
+            "provider": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": "Sports Management"
+          },
+          {
+            "@type": "Service",
+            "name": "Marketing & Branding",
+            "description": "Personal branding and marketing services for athletes",
+            "provider": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": "Sports Marketing"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://l-equipe-management.com/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does L'ÉQUIPE offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'ÉQUIPE offers comprehensive sports management services including player representation, transfer management, contract negotiation, scouting services, career planning, and marketing & branding for professional football players."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is L'ÉQUIPE based?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'ÉQUIPE is an international football agency based in Switzerland, serving clients worldwide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What languages does L'ÉQUIPE support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L'ÉQUIPE provides services in English, French, German, Spanish, and Arabic to serve our diverse international clientele."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Team Members Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Person",
+            "name": "MOUSSA MEITE",
+            "jobTitle": "Co-Founder & Director",
+            "worksFor": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "SOUFIANE AIT SALEM",
+            "jobTitle": "Co-Founder & Director",
+            "worksFor": {
+              "@type": "SportsOrganization",
+              "name": "L'ÉQUIPE"
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "L'ÉQUIPE International Football Agency",
+        "url": "https://l-equipe-management.com",
+        "description": "International Football Agency specializing in sports consulting, management and marketing based in Switzerland",
+        "inLanguage": ["en", "fr", "de", "es", "ar"],
+        "publisher": {
+          "@type": "SportsOrganization",
+          "name": "L'ÉQUIPE"
         }
       }
     </script>
@@ -157,8 +366,10 @@
           <a class="navbar-brand" href="/" aria-label="L'ÉQUIPE Home">
             <img
               src="assets/img/logo/color-transparent.png"
-              alt="L'ÉQUIPE"
+              alt="L'ÉQUIPE International Football Agency Logo"
               class="logo-img"
+              width="180"
+              height="60"
             />
           </a>
 
@@ -463,8 +674,11 @@
               <div class="about-logo-container text-center mb-4 reveal">
                 <img
                   src="assets/img/logo/black-transparent.png"
-                  alt="L'ÉQUIPE - All United"
+                  alt="L'ÉQUIPE International Football Agency - All United"
                   class="about-logo"
+                  width="400"
+                  height="133"
+                  loading="lazy"
                 />
               </div>
               <div class="section-content">
@@ -2956,8 +3170,11 @@
             <div class="footer-logo-wrapper mb-3">
               <img
                 src="assets/img/logo/color-transparent.png"
-                alt="L'ÉQUIPE"
+                alt="L'ÉQUIPE International Football Agency Logo"
                 class="footer-logo-img"
+                width="200"
+                height="66"
+                loading="lazy"
               />
             </div>
             <p class="footer-description" data-i18n="footer.description">

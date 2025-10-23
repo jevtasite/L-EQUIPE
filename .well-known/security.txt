@@ -1,0 +1,10 @@
+# Security Policy for L'ÉQUIPE International Football Agency
+# https://l-equipe-management.com
+
+Contact: mailto:info@l-equipe-management.com
+Expires: 2026-10-23T23:59:59.000Z
+Preferred-Languages: en, fr, de, es, ar
+Canonical: https://l-equipe-management.com/.well-known/security.txt
+
+# Please report any security vulnerabilities to the contact email above.
+# We appreciate responsible disclosure and will respond as quickly as possible.
